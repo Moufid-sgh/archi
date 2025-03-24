@@ -1,33 +1,43 @@
-import React, { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
-import '../index.css'
+import { useState, useRef } from "react";
+import Menu from "./Menu";
+
 
 const Navbar = () => {
 
+    const toggleRef = useRef(null)
+
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleMenu = (e) => {
+        e.stopPropagation()
+        setIsOpen(!isOpen)
+    }
 
 
     return (
-        <nav
-            //   ref={navbarRef}
-            className="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-transparent backdrop-blur-sm text-[#15161B] z-50"
-        >
+        <div className="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-transparent backdrop-blur-sm text-[#15161B] z-50">
+
             <div className="text-xl font-bold">AMI</div>
 
+            {/* hamburger-menu */}
             <div
-                className="holographic-card relative flex items-center justify-center rounded-full group overflow-hidden bg-[#15161B] p-2 size-[3.5rem] cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
+                className="relative flex items-center justify-center rounded-full group overflow-hidden bg-[#15161B] p-2 size-[3.5rem] cursor-pointer
+                           after:bg-lime-400 after:z-20 after:h-full after:w-full after:rounded-full after:absolute after:top-0 after:translate-y-full hover:after:translate-y-0 after:ease-in-out after:transition-all after:duration-500
+                           before:bg-[#15161B] before:z-30 before:h-full before:w-full before:rounded-full before:absolute before:top-0 before:translate-y-full hover:before:translate-y-0 before:ease-in-out before:transition-all before:duration-1000"
+                onClick={handleMenu}
+                ref={toggleRef}
             >
-                {/* <span className="absolute w-0 h-0 transition-[width,height] duration-500 ease-in-out bg-lime-300 rounded-full "></span> */}
-                <div className={`hamburger ${isOpen ? 'is-active' : ''}`}>
+
+                <div className={`hamburger z-50  ${isOpen && 'is-active'}`}>
                     <span className="hamburger-line"></span>
                     <span className="hamburger-line"></span>
                     <span className="hamburger-line"></span>
                 </div>
             </div>
 
-
-        </nav>
+            {/* menu */}
+            <Menu isOpen={isOpen} setIsOpen={setIsOpen} toggleRef={toggleRef.current} />
+        </div>
     );
 };
 

@@ -25,6 +25,17 @@ body{
 
 
 @font-face {
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat.ttf)  format('truetype');
+  font-display: swap;
+}
+
+.Montserrat {
+  font-family: Montserrat, sans-serif;
+  /* font-size: 22px; */
+}
+
+@font-face {
   font-family: 'Nohemi';
   src: url(./fonts/Nohemi-Regular.ttf)  format('truetype');
   font-display: swap;
@@ -32,7 +43,7 @@ body{
 
 .Nohemi-regular {
   font-family: Nohemi, sans-serif;
-  font-size: 22px;
+  /* font-size: 22px; */
 }
 
 
@@ -113,24 +124,9 @@ html.lenis body {
 
 
 
-.holographic-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  border-radius: 100%;
-  background: #bbf451;
-  transform: rotate(-45deg);
-  transition: all 1s ease;
-  opacity: 0;
-}
 
-.holographic-card:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
-}
+
+
 
 
 
