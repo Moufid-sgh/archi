@@ -20,31 +20,34 @@ html {
 body{
   max-width: 1500px;
   margin: 0 auto;
-  background-color: #FFF9F4;
+  /* background-color: #FFF9F4; */
+  background-color: #F9F9F9;
 }
 
 
+/* font--------------------- */
 @font-face {
-  font-family: 'Montserrat';
-  src: url(./fonts/Montserrat.ttf)  format('truetype');
+  font-family: 'Syne';
+  src: url(./fonts/Syne.ttf)  format('truetype');
   font-display: swap;
 }
 
-.Montserrat {
-  font-family: Montserrat, sans-serif;
-  /* font-size: 22px; */
+.syne {
+  font-family: Syne, sans-serif;
 }
 
 @font-face {
-  font-family: 'Nohemi';
-  src: url(./fonts/Nohemi-Regular.ttf)  format('truetype');
+  font-family: 'Inter';
+  src: url(./fonts/Inter.ttf)  format('truetype');
   font-display: swap;
 }
 
-.Nohemi-regular {
-  font-family: Nohemi, sans-serif;
-  /* font-size: 22px; */
+.inter {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
 }
+
+
 
 
 html.lenis,
@@ -120,6 +123,27 @@ html.lenis body {
   width: 100%;
   transform: translateY(-50%) rotateZ(135deg);
 }
+
+
+
+
+/* src/App.css */
+/* .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 4rem;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.char {
+  display: inline-block; 
+} */
 
 
 

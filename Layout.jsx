@@ -13,7 +13,7 @@ const Layout = () => {
   const isLoading = navigation.state === "loading";
 
   return (
-    <main className="Montserrat">
+    <main className="inter">
       <ScrollToTop />
       <Navbar />
       {isLoading && <div className="flex items-center justify-center min-h-screen"><p className="loader"></p></div>}

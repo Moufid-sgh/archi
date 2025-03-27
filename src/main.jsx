@@ -5,6 +5,7 @@ import './index.css'
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Layout from '../Layout';
+import Aura from './pages/Aura';
 
 const router = createBrowserRouter([
   {
@@ -15,10 +16,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />
       },
-      // {
-      //   path: 'login',
-      //   element: <Login />
-      // },
+      {
+        path: 'aura',
+        element: <Aura />
+      },
       // {
       //   path: 'recipe/:id',
       //   element: <Recipe />

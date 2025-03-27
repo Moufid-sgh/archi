@@ -22,7 +22,7 @@ const Navbar = () => {
             {/* hamburger-menu */}
             <div
                 className="relative flex items-center justify-center rounded-full group overflow-hidden bg-[#15161B] p-2 size-[3.5rem] cursor-pointer
-                           after:bg-lime-400 after:z-20 after:h-full after:w-full after:rounded-full after:absolute after:top-0 after:translate-y-full hover:after:translate-y-0 after:ease-in-out after:transition-all after:duration-500
+                           after:bg-[#CAF35A] after:z-20 after:h-full after:w-full after:rounded-full after:absolute after:top-0 after:translate-y-full hover:after:translate-y-0 after:ease-in-out after:transition-all after:duration-500
                            before:bg-[#15161B] before:z-30 before:h-full before:w-full before:rounded-full before:absolute before:top-0 before:translate-y-full hover:before:translate-y-0 before:ease-in-out before:transition-all before:duration-1000"
                 onClick={handleMenu}
                 ref={toggleRef}
