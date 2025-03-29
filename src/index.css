@@ -21,7 +21,8 @@ body{
   max-width: 1500px;
   margin: 0 auto;
   /* background-color: #FFF9F4; */
-  background-color: #F9F9F9;
+  /* background-color: #F9F9F9; */
+  background-color: #F0F2F5;
 }
 
 
@@ -36,20 +37,21 @@ body{
   font-family: Syne, sans-serif;
 }
 
+
 @font-face {
-  font-family: 'Inter';
-  src: url(./fonts/Inter.ttf)  format('truetype');
+  font-family: 'Raleway';
+  src: url(./fonts/Raleway.ttf)  format('truetype');
   font-display: swap;
 }
 
-.inter {
-  font-family: Inter, sans-serif;
+.Raleway {
+  font-family: Raleway, sans-serif;
   font-size: 18px;
 }
 
 
 
-
+/* lenis------------------ */
 html.lenis,
 html.lenis body {
   height: auto;
@@ -124,26 +126,25 @@ html.lenis body {
   transform: translateY(-50%) rotateZ(135deg);
 }
 
+.info {
+  flex: 1
+}
 
-
-
-/* src/App.css */
-/* .App {
+.info:nth-child(2) {
+  line-height: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-.title {
-  font-size: 4rem;
-  color: black;
-  font-family: Arial, sans-serif;
+.info p .line {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.char {
-  display: inline-block; 
-} */
+.info p .line span {
+  position: relative;
+  will-change: transform;
+}
 
 
 

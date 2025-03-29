@@ -26,44 +26,44 @@ const Menu = ({ isOpen, setIsOpen, toggleRef }) => {
 
 
     return (
-        <nav ref={menuRef} className={`absolute right-0 top-0 bg-[#15161B] text-white syne rounded-b-lg p-6 w-full md:w-auto transition-transform duration-700 transform
+        <nav ref={menuRef} className={`absolute right-0 top-0 bg-[#15161B] text-white rounded-b-lg p-6 w-full md:w-auto transition-transform duration-700 transform
                 ${isOpen ? 'translate-y-0 ease-out' : '-translate-y-100 ease-in'}`}>
 
-            <ul className='md:flex items-center mt-16 mr-20 space-x-8  tracking-wide text-2xl'>
+            <ul className='md:flex items-center mt-16 mr-20 space-x-6  tracking-wide text-xl'>
                 <li>
                     <Link
                         to="/"
-                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/" && 'underline underline-offset-2 decoration-2 decoration-[#CAF35A]'
+                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/" && 'underline underline-offset-2 decoration-2 decoration-lime-500'
                             }`}
                     >
-                        Accueil
+                        ACCUEIL
                     </Link>
                 </li>
                 <li>
                     <Link
                         to="/aura"
-                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/aura" && 'underline underline-offset-2 decoration-2 decoration-[#CAF35A]'
+                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/aura" && 'underline underline-offset-2 decoration-2 decoration-lime-500'
                             }`}
                     >
-                        Aura
+                        AURA
                     </Link>
                 </li>
                 <li>
                     <Link
                         to="/Projets"
-                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/projets" && 'underline underline-offset-2 decoration-2 decoration-[#CAF35A]'
+                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/projets" && 'underline underline-offset-2 decoration-2 decoration-lime-500'
                             }`}
                     >
-                        Projets
+                        PROJETS
                     </Link>
                 </li>
                 <li>
                     <Link
                         to="/Expertise"
-                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/expertise" && 'underline underline-offset-2 decoration-2 decoration-[#CAF35A]'
+                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/expertise" && 'underline underline-offset-2 decoration-2 decoration-lime-500'
                             }`}
                     >
-                        Expertise
+                        EXPERTISE
                     </Link>
                 </li>
             </ul>

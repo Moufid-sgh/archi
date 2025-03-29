@@ -41,7 +41,7 @@ function Aura() {
   });
 
   return (
-    <div className="App">
+    <div className="App mt-48">
       <h1 ref={titleRef} className="title">
         {chars}
       </h1>
