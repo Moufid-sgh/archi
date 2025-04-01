@@ -41,10 +41,24 @@ function Aura() {
   });
 
   return (
-    <div className="App mt-48">
-      <h1 ref={titleRef} className="title">
+    <div className="flex justify-center mt-36 px-2 pb-10">
+      {/* <h1 ref={titleRef} className="title">
         {chars}
-      </h1>
+      </h1> */}
+      <section className="bg-[#E49366] font-semibold w-full lg:w-[40%] p-8 lg:p-10 space-y-4">
+        <p>
+        Nous pensons que le système qui régit la relation « agence-client » est totalement dépassé.
+        </p>
+
+        <p>
+        Les marques se sentent coincées dans une boucle infinie : tout semble indiquer qu'elles n'ont pas d'autre choix que de dépenser chaque année plus, sur plus de points de contact, pour être plus compétitives. Les agences, en miroir, font de leur mieux pour leur fournir toujours plus...
+        </p>
+
+        <p>
+        Plus, plus, plus – alors qu'en fait, les marques peuvent dépenser plus intelligemment si elles se concentrent sur leur “truc”. Leur vérité à elle, leur raison d'être et la manière de rendre cet ADN actuel ou – comme nous aimons le dire – culturellement pertinent.
+        </p>
+
+      </section>
     </div>
   );
 }

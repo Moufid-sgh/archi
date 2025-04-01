@@ -7,29 +7,43 @@
 html {
   width: 100%;
   padding: 0;
-  margin: 0;  
+  margin: 0;
 }
 
 #root {
   width: 100%;
-  min-height: 100%; 
+  min-height: 100%;
   padding: 0;
   margin: 0;
 }
 
-body{
+body {
+  position: relative;
   max-width: 1500px;
   margin: 0 auto;
-  /* background-color: #FFF9F4; */
   /* background-color: #F9F9F9; */
-  background-color: #F0F2F5;
+  /* background-color: #ececec; */
+  /* background-color: #F1F1F1; */
+  /* background-color: #E6E8EA; */
+  background-image: url('https://cdn.prod.website-files.com/66c2fc2d3f238706366ee71c/66d6c0c9c4e66da0d30c9f2a_texture.webp');
 }
-
+/* green #00FFA9 */
+/* body::before {
+  content: "";
+  background: #E3E3E3;
+  opacity: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+} */
 
 /* font--------------------- */
 @font-face {
   font-family: 'Syne';
-  src: url(./fonts/Syne.ttf)  format('truetype');
+  src: url(./fonts/Syne.ttf) format('truetype');
   font-display: swap;
 }
 
@@ -40,13 +54,24 @@ body{
 
 @font-face {
   font-family: 'Raleway';
-  src: url(./fonts/Raleway.ttf)  format('truetype');
+  src: url(./fonts/Raleway.ttf) format('truetype');
   font-display: swap;
 }
 
 .Raleway {
   font-family: Raleway, sans-serif;
   font-size: 18px;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url(./fonts/Oswald.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Oswald {
+  font-family: Oswald, sans-serif;
+  /* font-size: 18px; */
 }
 
 
@@ -126,6 +151,8 @@ html.lenis body {
   transform: translateY(-50%) rotateZ(135deg);
 }
 
+
+/* info landing */
 .info {
   flex: 1
 }
@@ -146,14 +173,13 @@ html.lenis body {
   will-change: transform;
 }
 
+/* background */
+.bg-pattern {
+  background-color: #15161B;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
 
 
-
-
-
-
-
-
-
-
-
+.bg-card {
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb)
+}
