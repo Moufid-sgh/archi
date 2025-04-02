@@ -25,7 +25,8 @@ body {
   /* background-color: #ececec; */
   /* background-color: #F1F1F1; */
   /* background-color: #E6E8EA; */
-  background-image: url('https://cdn.prod.website-files.com/66c2fc2d3f238706366ee71c/66d6c0c9c4e66da0d30c9f2a_texture.webp');
+  /* background-image: url('https://cdn.prod.website-files.com/66c2fc2d3f238706366ee71c/66d6c0c9c4e66da0d30c9f2a_texture.webp'); */
+  background-image: url('/background.webp');
 }
 /* green #00FFA9 */
 /* body::before {

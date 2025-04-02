@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-transparent backdrop-blur-sm z-50">
+        <div className="fixed top-0 w-full flex justify-between items-center px-2 lg:px-8 py-4 bg-transparent backdrop-blur-sm z-50">
 
             <div className="syne text-2xl font-bold">Manel Archi Immo</div>
 

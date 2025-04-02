@@ -18,7 +18,7 @@ const Layout = () => {
       <ScrollToTop />
       <Navbar />
       {isLoading && <div className="flex items-center justify-center min-h-screen"><p className="loader"></p></div>}
-      <div>
+      <div className="mb-20">
         <Outlet />
       </div>
       <Footer />
