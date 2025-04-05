@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 * {
   box-sizing: border-box;
 }
@@ -28,7 +29,9 @@ body {
   /* background-image: url('https://cdn.prod.website-files.com/66c2fc2d3f238706366ee71c/66d6c0c9c4e66da0d30c9f2a_texture.webp'); */
   background-image: url('/background.webp');
 }
-/* green #00FFA9 */
+
+/* green (#00FFA9) */
+/* red (#E49366) */
 /* body::before {
   content: "";
   background: #E3E3E3;
@@ -72,9 +75,26 @@ body {
 
 .Oswald {
   font-family: Oswald, sans-serif;
-  /* font-size: 18px; */
 }
 
+/* page transition */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
 
 
 /* lenis------------------ */
@@ -155,7 +175,7 @@ html.lenis body {
 
 /* info landing */
 .info {
-  flex: 1
+  flex: 1;
 }
 
 .info:nth-child(2) {
@@ -165,14 +185,21 @@ html.lenis body {
   align-items: center;
 }
 
+
 .info p .line {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-kerning: none;
 }
 
 .info p .line span {
   position: relative;
   will-change: transform;
 }
+
+
 
 /* background */
 .bg-pattern {
@@ -181,6 +208,24 @@ html.lenis body {
 }
 
 
-.bg-card {
-  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb)
+
+/* page transition */
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 400ms ease-in;
+  transition-delay: 200ms;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 400ms ease-out;
 }

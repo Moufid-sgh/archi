@@ -50,7 +50,7 @@ const Services = () => {
     });
 
     return (
-        <div className="wrapper rounded-3xl w-full min-h-screen pt-[100px] pb-[50px]">
+        <div className="wrapper rounded-3xl w-full min-h-screen mt-12 lg:mt-20 pb-[50px]">
 
             <div className="title-wrapper mb-[470px]">
                 <h1 className="title syne text-4xl lg:text-6xl font-bold text-center">
@@ -68,12 +68,12 @@ const Services = () => {
                         </div>
                         <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-slate-700'>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Programmation stratégique, fonctionnelle, architecturale et technique
                                 Schéma directeur immobilier.
                             </li>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Assistance du MOA et du MOE dans le développement du projet.
                             </li>
                         </ul>
@@ -88,12 +88,12 @@ const Services = () => {
                         </div>
                         <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-slate-700'>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Programmation stratégique, fonctionnelle, architecturale et technique
                                 Schéma directeur immobilier.
                             </li>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Assistance du MOA et du MOE dans le développement du projet.
                             </li>
                         </ul>
@@ -108,12 +108,12 @@ const Services = () => {
                         </div>
                         <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-slate-700'>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Programmation stratégique, fonctionnelle, architecturale et technique
                                 Schéma directeur immobilier.
                             </li>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Assistance du MOA et du MOE dans le développement du projet.
                             </li>
                         </ul>
@@ -128,12 +128,12 @@ const Services = () => {
                         </div>
                         <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-slate-700'>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Programmation stratégique, fonctionnelle, architecturale et technique
                                 Schéma directeur immobilier.
                             </li>
                             <li>
-                                <span className='mr-1.5 text-[#E49366]'>&#10004;</span>
+                                <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
                                 Assistance du MOA et du MOE dans le développement du projet.
                             </li>
                         </ul>

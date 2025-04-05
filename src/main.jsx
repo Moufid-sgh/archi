@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, Navigate, useLocation } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Layout from '../Layout';
 import Aura from './pages/Aura';
+import Projets from './pages/Projets';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: 'aura',
         element: <Aura />
+      },
+      {
+        path: 'projets',
+        element: <Projets />
       },
       // {
       //   path: 'recipe/:id',

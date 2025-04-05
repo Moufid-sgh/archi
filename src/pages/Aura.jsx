@@ -45,7 +45,7 @@ function Aura() {
       {/* <h1 ref={titleRef} className="title">
         {chars}
       </h1> */}
-      <section className="bg-[#E49366] font-semibold w-full lg:w-[40%] p-8 lg:p-10 space-y-4">
+      <section className="text-xl leading-10 w-full lg:w-[60%] p-8 lg:p-10 space-y-4">
         <p>
         Nous pensons que le système qui régit la relation « agence-client » est totalement dépassé.
         </p>

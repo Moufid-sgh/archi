@@ -1,5 +1,5 @@
-import { Outlet, useNavigation } from "react-router-dom";
-// import Footer from "./src/components/Footer";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import ScrollToTop from "./src/components/ScrollToTop";
 import Navbar from "./src/components/Navbar";
 import useSmoothScroll from "./src/components/SmoothScroll ";
@@ -10,19 +10,35 @@ const Layout = () => {
 
   useSmoothScroll()
 
+  const location = useLocation();
+
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
 
+
   return (
-    <main className="Raleway text-[#091423]">
-      <ScrollToTop />
-      <Navbar />
-      {isLoading && <div className="flex items-center justify-center min-h-screen"><p className="loader"></p></div>}
-      <div className="mb-20">
-        <Outlet />
-      </div>
+    <div className="relative min-h-screen overflow-hidden">
+
+      <main className="Raleway text-[#091423] page">
+        <ScrollToTop />
+        <Navbar />
+        <TransitionGroup>
+          <CSSTransition
+            key={location.key}
+            timeout={1200}
+            unmountOnExit
+            classNames="page"
+          >
+          {/* {isLoading && <div className="flex items-center justify-center min-h-screen"><p className="loader"></p></div>} */}
+          <div className="mb-20">
+            <Outlet />
+          </div>
+        </CSSTransition>
+      </TransitionGroup>
       <Footer />
     </main>
+      
+    </div >
   );
 };
 

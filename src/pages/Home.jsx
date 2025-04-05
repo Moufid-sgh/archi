@@ -1,15 +1,17 @@
+import Contact from "../components/Contact"
 import Hero from "../components/Hero"
-import Projets from "../components/Projets"
+import SelectedProjects from "../components/SelectedProjects"
 import Services from "../components/Services"
 
 
 const Home = () => {
 
   return (
-    <div className='h-[4000px] px-2 lg:px-8'>
+    <div className='px-2 lg:px-8'>
       <Hero />
       <Services />
-      <Projets />
+      <SelectedProjects />
+      <Contact />
     </div>
   )
 }
