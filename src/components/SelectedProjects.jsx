@@ -8,14 +8,14 @@ const SelectedProjects = () => {
     const imgs = [img1, img2, img3]
 
     return (
-        <div className='mt-56'>
+        <div className='mt-48'>
             <div className="">
                 <h1 className="title syne text-4xl lg:text-6xl font-bold text-center">
                     Projets
                 </h1>
             </div>
 
-            <section className='lg:flex items-center justify-between mt-24 space-y-12 lg:space-y-0'>
+            <section className='lg:flex items-center justify-between mt-12 lg:mt-24 space-y-12 lg:space-y-0'>
                 {
                     imgs.map((el, index) => {
                         return (

@@ -1,62 +1,60 @@
-// src/App.jsx
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react";
+import { useRef, useState, useLayoutEffect } from "react";
+import SplitType from 'split-type';
+
 
 
 function Aura() {
-  const titleRef = useRef(null);
 
-  // Texte à animer
-  const text = "Baseborn Studio";
-  // Diviser le texte en lettres avec un index
-  const chars = text.split("").map((char, index) => (
-    <span
-      key={index}
-      className="char"
-      style={{ "--char-index": index }}
-    >
-      {char}
-    </span>
-  ));
+  const auraRef = useRef(null)
+  const containerRef = useRef(null)
+  const titleRef = useRef(null);
+  const para1Ref = useRef(null);
+  const para2Ref = useRef(null);
+  const para3Ref = useRef(null);
+
+
 
   useGSAP(() => {
-    // Animation GSAP
-    gsap.fromTo(
-      ".char",
-      {
-        opacity: 0,
-        y: 50, // Décalage initial vers le bas
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", // Masqué
-      },
-      {
-        opacity: 1,
-        y: 0,
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", // Révélé
-        duration: 0.8,
-        ease: "power1.out", // Courbe fluide
-        stagger: 0.06, // Décalage de 65ms entre chaque lettre
-      }
-    );
-  });
+
+    gsap.set(titleRef.current, { y: 400 });
+    gsap.set(containerRef.current, { opacity: 0 });
+    gsap.set(para1Ref.current, { y: 400 });
+    gsap.set(para2Ref.current, { y: 400 });
+    gsap.set(para3Ref.current, { y: 400 });
+
+    const tl = gsap.timeline({  defaults: { ease: 'power2.out' }});
+
+    tl.to(containerRef.current, { opacity: 1, duration: 1 })
+      .to(titleRef.current, { y: 0, duration: 1 }, '-=0.8')
+      .to(para1Ref.current, { y: 0, duration: 1 }, '-=0.5')
+      .to(para2Ref.current, { y: 0, duration: 1 }, '-=0.5')
+      .to(para3Ref.current, { y: 0, duration: 1 }, '-=0.5');
+   
+  }, { scope: auraRef });
+
 
   return (
-    <div className="flex justify-center mt-36 px-2 pb-10">
-      {/* <h1 ref={titleRef} className="title">
-        {chars}
-      </h1> */}
-      <section className="text-xl leading-10 w-full lg:w-[60%] p-8 lg:p-10 space-y-4">
-        <p>
-        Nous pensons que le système qui régit la relation « agence-client » est totalement dépassé.
-        </p>
+    <div ref={auraRef} className="flex justify-center mt-28 px-2 pb-10">
 
-        <p>
-        Les marques se sentent coincées dans une boucle infinie : tout semble indiquer qu'elles n'ont pas d'autre choix que de dépenser chaque année plus, sur plus de points de contact, pour être plus compétitives. Les agences, en miroir, font de leur mieux pour leur fournir toujours plus...
-        </p>
+      <section ref={containerRef} className="relative bg-white shadow-md rounded-2xl text-lg leading-10 w-full md:w-[70%] lg:w-[50%] p-8 lg:p-10 space-y-4">
+        <div className='overflow-hidden text-center py-2 mb-6'>
+          <h1 ref={titleRef} className='syne font-bold text-5xl'>Aura</h1>
+        </div>
 
-        <p>
-        Plus, plus, plus – alors qu'en fait, les marques peuvent dépenser plus intelligemment si elles se concentrent sur leur “truc”. Leur vérité à elle, leur raison d'être et la manière de rendre cet ADN actuel ou – comme nous aimons le dire – culturellement pertinent.
+        <div className="overflow-hidden">
+          <p ref={para1Ref}>Nous pensons que le système qui régit la relation « agence-client » est totalement dépassé.</p>
+        </div>
+
+        <div className="overflow-hidden">
+        <p ref={para2Ref}> Les marques se sentent coincées dans une boucle infinie : tout semble indiquer qu'elles n'ont pas d'autre choix que de dépenser chaque année plus, sur plus de points de contact, pour être plus compétitives. Les agences, en miroir, font de leur mieux pour leur fournir toujours plus...
         </p>
+        </div>
+
+        <div className="overflow-hidden">
+          <p ref={para3Ref}>Plus, plus, plus – alors qu'en fait, les marques peuvent dépenser plus intelligemment si elles se concentrent sur leur “truc”. Leur vérité à elle, leur raison d'être et la manière de rendre cet ADN actuel ou – comme nous aimons le dire – culturellement pertinent.</p>
+        </div>
 
       </section>
     </div>

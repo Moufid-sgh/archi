@@ -95,7 +95,7 @@ const Hero = () => {
     useGSAP(() => {
         if (!textReady) return;
 
-        const tl = gsap.timeline({  defaults: { ease: 'power2.out' }});
+        const tl = gsap.timeline({  defaults: { ease: 'power1.out' }});
 
         gsap.set(titleRef.current, { y: 400 });
         gsap.set('.info p .line span', { y: 400, display: 'inline-block'});
