@@ -12,7 +12,7 @@ const Footer = () => {
                 </ul>
         </div>
         <div>
-            <p className='syne text-xl font-bold'>Manel Archi Immo </p>
+            <p className='text-xl font-bold'>Manel Archi Immo </p>
             <p className='font-sans text-sm'>©{new Date().getFullYear()} Tous droits réservés</p>
         </div>
     </footer>

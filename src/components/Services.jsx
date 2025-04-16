@@ -12,7 +12,22 @@ const Services = () => {
     const serviceRef = useRef(null);
 
     useGSAP(() => {
-        //title
+        //title reveal
+        gsap.set(".title", { y: 100 });
+
+        gsap.to(".title", {
+            y: 0,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: ".title-wrapper",
+              scrub: 1,
+              start: "top center",
+              end: "bottom center",
+              once: true,
+            }
+          });
+
+        //title pin
         gsap.to(".title", {
             scrollTrigger: {
                 trigger: ".title-wrapper",
@@ -36,7 +51,7 @@ const Services = () => {
             gsap.to(card, {
                 // x: x,
                 transformOrigin: "top center",
-                ease: "expo.in",
+                ease: "power1.out",
                 scrollTrigger: {
                     trigger: wrapper,
                     start: "top " + (170 + 57 * i),
@@ -57,10 +72,10 @@ const Services = () => {
     { title: "CONSEIL EN IMMOBILIER D’ENTREPRISE", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." }]
 
     return (
-        <div ref={serviceRef} className="rounded-3xl w-full min-h-screen mt-6 lg:mt-12 pb-[50px]">
+        <div ref={serviceRef} className="rounded-3xl w-full min-h-screen mt-6 lg:mt-28 pb-[50px]">
 
-            <div className="title-wrapper mb-[470px]">
-                <h1 className="title syne text-4xl lg:text-6xl font-bold text-center">
+            <div className="title-wrapper mb-[470px] overflow-hidden">
+                <h1 className="title PoiretOne tracking-wide text-4xl lg:text-6xl font-bold text-center">
                     Nos Services
                 </h1>
             </div>
@@ -70,14 +85,14 @@ const Services = () => {
                 {services.map((service, index) => (
                     <div key={index} className="card-wrapper relative rounded-3xl shadow-lg w-full bg-white border border-gray-300 perspective-[500px] mb-52 last:mb-0">
                         <div className="card h-[370px] md:h-[300px] px-4 md:px20 flex flex-col items-start">
-                            <div className='lg:flex lg:items-end space-x-2 syne font-bold text-xl md:text-2xl mb-8 mt-2'>
+                            <div className='lg:flex lg:items-end space-x-2 syne font-bold text-xl text-[#091423] md:text-2xl mb-8 mt-2'>
                                 <span className='text-5xl pt-1'>.0{index + 1}</span>
                                 <p>{service.title}</p>
                             </div>
-                            <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-slate-700'>
+                            <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-lg text-slate-700'>
                                 {service.description.split('. ').map((desc, i) => (
                                     <li key={i}>
-                                        <span className='mr-1.5 text-[#00FFA9]'>&#10004;</span>
+                                        <span className='mr-1.5 text-[#E63098] font-bold'>&#10004;</span>
                                         {desc}
                                     </li>
                                 ))}

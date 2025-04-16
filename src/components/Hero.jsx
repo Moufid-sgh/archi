@@ -1,136 +1,97 @@
-import { gsap } from 'gsap';
+import { useRef, useState } from 'react'
+import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { useRef, useLayoutEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom';
-import img from '/landing.jpg'
-import SplitType from 'split-type';
-import '../index.css'
 
 const Hero = () => {
 
-    const location = useLocation();
-    const titleRef = useRef(null);
-    const containerRef = useRef(null)
-    const imgContainerRef = useRef(null)
-    const imgRef = useRef(null)
+    const data = [
+        {
+            image: "/Euroapi_1.jpg",
+            title: "Need for Speed",
+            text: "Transformons votre intérieur en une œuvre d’art vivante."
+        },
+        {
+            image: "/Euroapi_2.jpg",
+            title: "Battle Field",
+            text: "Chaque détail raconte une histoire, chaque pièce reflète une âme."
+        },
+        {
+            image: "/Euroapi_3.jpg",
+            title: "Diablo",
+            text: "L'harmonie des espaces commence par une vision."
+        },
+
+    ];
+
+    const [currentIdx, setCurrentIdx] = useState(0)
+
+    const { text, image } = data[currentIdx]
+
+    const handlePrev = () => {
+        setCurrentIdx(prev => prev === 0 ? data.length - 1 : prev - 1)
+    }
+
+    const handleNext = () => {
+        setCurrentIdx(prev => prev === data.length - 1 ? 0 : prev + 1)
+    }
+
+    const heroContainerRef = useRef(null)
     const textRef = useRef(null)
+    const imgRef = useRef(null)
 
-    const [textReady, setTextReady] = useState(false)
-
-    useLayoutEffect(() => {
-        setTextReady(false);
-        // Implémentation maison de debounce
-        const debounce = (func, wait) => {
-            let timeout;
-            return (...args) => {
-              clearTimeout(timeout);
-              timeout = setTimeout(() => func(...args), wait);
-            };
-          };
-
-        let text;
-        let ctx = gsap.context(() => {});
-        const container = containerRef.current;
-
-        const initAnimation = () => {
-          setTextReady(false);
-          ctx.revert();
-
-          // Clear les propriétés GSAP
-          gsap.set(
-            [titleRef.current, '.info p .line span', imgContainerRef.current, imgRef.current],
-            { clearProps: "all" }
-          );
-
-          // Re-split le texte
-          text = new SplitType('.info p', {
-            types: 'lines',
-            tagName: 'div',
-            lineClass: 'line',
-          });
-
-          // Encapsuler chaque ligne dans un span
-          text.lines?.forEach((line) => {
-            line.innerHTML = `<span>${line.innerHTML}</span>`;
-          });
-
-          setTimeout(() => setTextReady(true), 10);
-        };
-
-        // Initialisation
-        initAnimation();
-
-        // Handler de resize avec debounce
-        const handleResize = debounce(([entry]) => {
-          const cr = entry.contentRect;
-          const currentWidth = Math.round(cr.width);
-          const lastWidth = parseInt(container.dataset.lastWidth || 0);
-
-          if (text && currentWidth !== lastWidth) {
-            text.revert();
-            initAnimation();
-            container.dataset.lastWidth = currentWidth;
-          }
-        }, 250);
-
-        // Observer les changements de taille
-        const resizeObserver = new ResizeObserver(handleResize);
-
-        if (container) {
-          resizeObserver.observe(container);
-          // Stocker la largeur initiale
-          container.dataset.lastWidth = Math.round(container.offsetWidth);
-        }
-
-        // Nettoyage
-        return () => {
-          resizeObserver.disconnect();
-          text?.revert();
-          ctx.revert();
-          if (container) delete container.dataset.lastWidth;
-        };
-      }, [location.pathname]);
 
 
     useGSAP(() => {
-        if (!textReady) return;
 
-        const tl = gsap.timeline({  defaults: { ease: 'power1.out' }});
+        gsap.set(textRef.current, { y: 80 })
+        gsap.set(imgRef.current, { y: 250, scale: 1.3 })
 
-        gsap.set(titleRef.current, { y: 400 });
-        gsap.set('.info p .line span', { y: 400, display: 'inline-block'});
-        gsap.set(imgContainerRef.current, { yPercent: -100, autoAlpha: 0 });
-        gsap.set(imgRef.current, { yPercent: 100, scale: 1.3 });
+        gsap.to(textRef.current, { y: 0, duration: 1, ease: 'power1.out' })
+        gsap.to(imgRef.current, { y: 0, scale: 1, duration: 1, ease: 'power1.out' })
 
-        tl.to(titleRef.current, { y: 0, duration: 1.5 })
-          .to('.info p .line span', { y: 0, duration: 2, stagger: 0.12 }, '-=1')
-          .to(imgContainerRef.current, { yPercent: 0, autoAlpha: 1, duration: 1 }, '-=1')
-          .to(imgRef.current, { yPercent: 0, scale: 1, duration: 1 }, '-=1');
+    }, { dependencies: [currentIdx], scope: heroContainerRef })
 
-    },
-        { dependencies: [textReady], scope: containerRef }
-    );
+
 
 
 
     return (
-        <div ref={containerRef} className="mt-32 lg:mt-8 lg:flex items-center justify-center min-h-screen">
-            <div className='lg:w-1/2'>
-                <div className='overflow-hidden py-2 mb-6'>
-                    <h1 className='syne font-bold text-5xl' ref={titleRef} >Wanna work with me</h1>
+        <section ref={heroContainerRef} className='flex flex-col lg:flex-row items-center lg:justify-between mt-24 pb-6 sm:pb-0 px-2'>
+
+            <div className='order-last lg:order-first md:w-1/2 h-1/2 md:h-full lg:pr-8'>
+
+                <div className='overflow-hidden PoiretOne text-4xl md:text-5xl leading-14'>
+                    <p ref={textRef}>{text}</p>
                 </div>
-                <div className='info text-xl lg:pr-16 leading-20'>
-                    <p ref={textRef} >
-                        Parce que Yemanja conçoit et réalise des aménagements d’une grande diversité, chaque projet est pour nous l’occasion de développer des solutions singulières et de challenger notre créativité.
-                        Chacun a ses spécificités mais tous sont empreints du plaisir que nous avons à les réaliser tout
-                    </p>
+
+                <a href="mailto:manelrachdi@hotmail.fr"
+                    className='relative inline-flex items-center justify-center bg-[#E63098] text-white font-[550] overflow-hidden tracking-wider rounded-xl px-8 py-3 lg:px-10 lg:py-3.5 mt-10 duration-500 cursor-pointer group'
+                >
+                    <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-600 rounded-full group-hover:w-56 group-hover:h-56"></span>
+                    <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent"></span>
+                    <span className="relative">CONTACT</span>
+                </a>
+
+            </div>
+
+            {/* images part ************************/}
+            <div className='relative w-full md:w-1/2 h-1/2 md:h-full'>
+                <div className='absolute bottom-4 right-4 z-40 flex items-center text-end font-bold space-x-3'>
+                    <p onClick={handlePrev} className='cursor-pointer text-lg bg-white text-[#091423] hover:text-[#E63098] duration-300 px-2.5 rounded-md'>&#10094;</p>
+                    <p onClick={handleNext} className='cursor-pointer text-lg bg-white text-[#091423]  hover:text-[#E63098] duration-300 px-2.5 rounded-md'>&#10095;</p>
+                </div>
+
+                <div className='overflow-hidden rounded-3xl'>
+                    <img
+                        src={image}
+                        alt="pic"
+                        ref={imgRef}
+                        className='w-full h-[60vh] lg:h-[80vh] object-cover object-center rounded-3xl'
+                    />
                 </div>
             </div>
 
-            <div className='lg:w-1/2 mt-8 lg:mt-0 relative rounded-lg overflow-hidden' ref={imgContainerRef} >
-                <img src={img} alt='img' className='object-cover origin-left' ref={imgRef} />
-            </div>
-        </div>
+        </section>
     )
 }
 

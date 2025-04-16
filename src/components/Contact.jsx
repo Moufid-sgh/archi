@@ -7,9 +7,9 @@ import { useRef } from "react";
 
 const Contact = () => {
 
-   const contactRef = useRef(null)
+   const contactRef = useRef(null);
 
-   useGSAP(() => {
+   useGSAP(() => {    
     gsap.utils.toArray('.reveal').forEach(text => {
         // Split text
         let splitText = new SplitType(text, { type: 'words'})
@@ -27,19 +27,19 @@ const Contact = () => {
             end: "center center",
             toggleActions: "play none none none", 
             once: true, 
-            // markers: true,
           }
         })
       })
-    })
+    , { scope: contactRef }})
+    
 
     return (
-        <div ref={contactRef} className="reveal mt-20 text-3xl lg:text-5xl leading-15 lg:leading-22 mb-24">
+        <div ref={contactRef} className="reveal PoiretOne mt-20 text-3xl lg:text-5xl leading-15 lg:leading-22 mb-24">
             <p>Vous avez un projet en tête ? Parlons-en !</p>
-            <div className=''>
-                <p className="space-x-4">Envoyez-nous un message et nous reviendrons vers vous rapidement
+            <div className='flex'>
+                <p>Envoyez-nous un message et nous reviendrons vers vous rapidement.
                         <a href="mailto:manelrachdi@hotmail.fr" 
-                            className='border rounded-4xl inline-block bg-white cursor-pointer px-4  hover:border-[#00FFA9] duration-300'>
+                            className='inline-block cursor-pointer ml-2 text-[#E63098] hover:text-violet-600 duration-500'>
                             Contactez-nous
                         </a>
                 </p>

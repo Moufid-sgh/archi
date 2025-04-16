@@ -31,15 +31,15 @@ const Menu = ({ isOpen, setIsOpen, toggleRef }) => {
 
 
     return (
-        <nav ref={menuRef} className={`absolute right-0 top-0 bg-[#091423] text-white rounded-b-lg p-6 w-full md:w-auto transition-transform duration-700 transform
+        <nav ref={menuRef} className={`absolute right-0 top-0 bg-[#F788C0] text-black rounded-b-lg p-6 w-full md:w-auto transition-transform duration-700 transform
                 ${isOpen ? 'translate-y-0 ease-out' : '-translate-y-100 ease-in'}`}>
 
-            <ul className='md:flex items-center mt-16 mr-20 space-x-6 syne tracking-wide text-2xl'>
+            <ul className='md:flex items-center mt-16 mr-20 space-x-6 tracking-wide text-2xl font-bold'>
                 <li>
                     <Link
                         to="/"
                         onClick={handleNavigation}
-                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/" && 'underline underline-offset-2 decoration-3 decoration-[#00FFA9]'
+                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/" && 'text-white'
                             }`}
                     >
                         Accueil
@@ -49,7 +49,7 @@ const Menu = ({ isOpen, setIsOpen, toggleRef }) => {
                     <Link
                         to="/aura"
                         onClick={handleNavigation}
-                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/aura" && 'underline underline-offset-2 decoration-3 decoration-[#00FFA9]'
+                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/aura" && 'underline underline-offset-2 decoration-3 decoration-[#E63098]'
                             }`}
                     >
                         Aura
@@ -59,7 +59,7 @@ const Menu = ({ isOpen, setIsOpen, toggleRef }) => {
                     <Link
                         to="/projets"
                         onClick={handleNavigation}
-                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/projets" && 'underline underline-offset-2 decoration-3 decoration-[#00FFA9]'
+                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/projets" && 'underline underline-offset-2 decoration-3 decoration-[#E63098]'
                             }`}
                     >
                         Projets
@@ -69,7 +69,7 @@ const Menu = ({ isOpen, setIsOpen, toggleRef }) => {
                     <Link
                         to="/Expertise"
                         onClick={handleNavigation}
-                        className={`font-bold hover:opacity-50 duration-300 cursor-pointer ${pathname === "/expertise" && 'underline underline-offset-2 decoration-3 decoration-[#00FFA9]'
+                        className={`hover:opacity-50 duration-300 cursor-pointer ${pathname === "/expertise" && 'underline underline-offset-2 decoration-3 decoration-[#E63098]'
                             }`}
                     >
                         Expertise

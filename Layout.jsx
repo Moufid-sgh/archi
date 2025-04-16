@@ -14,7 +14,7 @@ const Layout = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <main className="relative Raleway text-[#091423] page">
+      <main className="relative Montserrat page">
         <ScrollToTop />
         <Navbar />
         {isLoading && (

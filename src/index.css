@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 * {
   box-sizing: border-box;
 }
@@ -22,59 +21,49 @@ body {
   position: relative;
   max-width: 1500px;
   margin: 0 auto;
-  /* background-color: #E6E8EA; */
-  background-image: url('/background.webp');
+  background: #091423;
+  color: #fff;
+  /* color: #D3D8E1; */
+  /* background-image: url('/background.png'); */
 }
 
 /* green (#00FFA9) */
 /* red (#E49366) */
 
+
 /* font--------------------- */
 @font-face {
-  font-family: 'Syne';
-  src: url(./fonts/Syne.ttf) format('truetype');
+  font-family: 'PoiretOne';
+  src: url(./fonts/PoiretOne.ttf) format('truetype');
   font-display: swap;
 }
 
-.syne {
-  font-family: Syne, sans-serif;
+.PoiretOne {
+  font-family: PoiretOne, sans-serif;
 }
 
 
 @font-face {
-  font-family: 'Raleway';
-  src: url(./fonts/Raleway.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat.ttf) format('truetype');
   font-display: swap;
 }
 
-.Raleway {
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
+.Montserrat {
+  font-family: Montserrat, sans-serif;
+}
+
+@font-face {
+  font-family: 'PoiretOne';
+  src: url(./fonts/PoiretOne.ttf) format('truetype');
+  font-display: swap;
+}
+
+.PoiretOne {
+  font-family: PoiretOne, sans-serif;
 }
 
 
-/* page transition------------------------------------- */
-/* page transition */
-/* .page {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-} */
-.page-enter {
-  opacity: 0;
-}
-.page-enter-active {
-  opacity: 1;
-  transition: opacity 400ms;
-  transition-delay: 600ms;
-}
-.page-exit {
-  opacity: 1;
-}
-.page-exit-active {
-  opacity: 0;
-  transition: opacity 400ms;
-}
 
 
 /* lenis-------------------------------------------------- */
@@ -116,7 +105,7 @@ html.lenis body {
   width: 100%;
   height: 0.125em;
   border-radius: 0.125em;
-  background: white;
+  background: #091423;
   transition: inherit;
 }
 
