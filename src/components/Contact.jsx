@@ -34,7 +34,7 @@ const Contact = () => {
     
 
     return (
-        <div ref={contactRef} className="reveal PoiretOne mt-20 text-3xl lg:text-5xl leading-15 lg:leading-22 mb-24">
+        <div ref={contactRef} className="reveal mt-20 text-3xl lg:text-5xl leading-15 lg:leading-22 mb-24 px-2 lg:px-8">
             <p>Vous avez un projet en tête ? Parlons-en !</p>
             <div className='flex'>
                 <p>Envoyez-nous un message et nous reviendrons vers vous rapidement.

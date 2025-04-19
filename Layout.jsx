@@ -2,7 +2,7 @@ import { Outlet, useNavigation } from "react-router-dom";
 import ScrollToTop from "./src/components/ScrollToTop";
 import useSmoothScroll from "./src/components/SmoothScroll ";
 import Footer from "./src/components/Footer";
-import Navbar from "./src/components/NavBar";
+import Navbar from "./src/components/Navbar";
 
 const Layout = () => {
 
@@ -14,7 +14,7 @@ const Layout = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <main className="relative Montserrat page">
+      <main className="relative PolySans page">
         <ScrollToTop />
         <Navbar />
         {isLoading && (

@@ -7,7 +7,7 @@ import Services from "../components/Services"
 const Home = () => {
 
   return (
-    <div className='px-2 lg:px-8'>
+    <div className=''>
       <Hero />
       <Services />
       <SelectedProjects />

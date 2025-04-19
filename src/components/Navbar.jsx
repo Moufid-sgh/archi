@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className="fixed top-0 w-full flex justify-between items-center px-2 lg:px-8 py-4 bg-transparent backdrop-blur-sm z-50">
 
             <Link to="/">
-                <div className="text-2xl font-bold">Manel Archi Immo</div>
+                <p className="text-2xl font-bold Cropar tracking-wider">Mai'n</p>
             </Link>
 
             {/* hamburger-menu */}
@@ -49,7 +49,7 @@ const Navbar = () => {
             <Menu isOpen={isOpen} setIsOpen={setIsOpen} toggleRef={toggleRef.current} />
 
 
-            <ul className="hidden lg:flex items-center space-x-8 tracking-wide text-lg">
+            <ul className="hidden lg:flex items-center space-x-8 tracking-wide text-xl">
                 {menu.map((item, index) => (
                     <li key={index} className="group overflow-hidden h-6">
                         <Link to={item.link} className="group-hover:-translate-y-7 block duration-500">

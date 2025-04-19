@@ -4,8 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
-
 gsap.registerPlugin(ScrollTrigger);
+
 
 const Services = () => {
 
@@ -17,12 +17,12 @@ const Services = () => {
 
         gsap.to(".title", {
             y: 0,
-            ease: "power1.out",
+            ease: "power2.out",
             scrollTrigger: {
               trigger: ".title-wrapper",
               scrub: 1,
-              start: "top center",
-              end: "bottom center",
+              start: "top 80%",
+              end: "top 40%",
               once: true,
             }
           });
@@ -46,7 +46,6 @@ const Services = () => {
 
         cardsWrappers.forEach((wrapper, i) => {
             const card = cards[i];
-            // const x = 30 * i;
 
             gsap.to(card, {
                 // x: x,
@@ -72,11 +71,11 @@ const Services = () => {
     { title: "CONSEIL EN IMMOBILIER D’ENTREPRISE", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." }]
 
     return (
-        <div ref={serviceRef} className="rounded-3xl w-full min-h-screen mt-6 lg:mt-28 pb-[50px]">
+        <div ref={serviceRef} className="rounded-3xl w-full min-h-screen mt-6 lg:mt-8 pb-[50px]">
 
             <div className="title-wrapper mb-[470px] overflow-hidden">
-                <h1 className="title PoiretOne tracking-wide text-4xl lg:text-6xl font-bold text-center">
-                    Nos Services
+                <h1 className="title PolySans tracking-wide text-4xl lg:text-7xl text-center">
+                    Services
                 </h1>
             </div>
 
@@ -89,7 +88,7 @@ const Services = () => {
                                 <span className='text-5xl pt-1'>.0{index + 1}</span>
                                 <p>{service.title}</p>
                             </div>
-                            <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-lg text-slate-700'>
+                            <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-xl text-slate-700'>
                                 {service.description.split('. ').map((desc, i) => (
                                     <li key={i}>
                                         <span className='mr-1.5 text-[#E63098] font-bold'>&#10004;</span>

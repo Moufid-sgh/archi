@@ -1,98 +1,121 @@
-import { useRef, useState } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+import { useRef, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import img1 from "/slider-1.jpg";
+import img2 from "/slider-2.jpg";
+import img3 from "/slider-3.jpg";
+import img4 from "/slider-4.jpg";
+import img5 from "/slider-5.jpg";
 
-const Details = () => {
 
-  const data = [
-    {
-      image: "/Euroapi_1.jpg",
-      title: "Need for Speed",
-      text: "Transformons votre intérieur en une œuvre d’art vivante."
-    },
-    {
-      image: "/Euroapi_2.jpg",
-      title: "Battle Field",
-      text: "Chaque détail raconte une histoire, chaque pièce reflète une âme."
-    },
-    {
-      image: "/Euroapi_3.jpg",
-      title: "Diablo",
-      text: "L'harmonie des espaces commence par une vision."
-    },
+const Projets = () => {
 
-  ];
+  const slider1Ref = useRef(null);
+  const slider2Ref = useRef(null);
 
-  const [currentIdx, setCurrentIdx] = useState(0)
-
-  const { text, image } = data[currentIdx]
-
-  const handlePrev = () => {
-    setCurrentIdx(prev => prev === 0 ? data.length - 1 : prev - 1)
-  }
+  useEffect(() => {
+    if (slider1Ref.current && slider2Ref.current) {
+      slider1Ref.current.slickGoTo(0);
+      slider2Ref.current.slickGoTo(0);
+    }
+  }, []);
 
   const handleNext = () => {
-    setCurrentIdx(prev => prev === data.length - 1 ? 0 : prev + 1)
-  }
+    slider1Ref.current?.slickNext();
+    slider2Ref.current?.slickNext();
+  };
 
-  const heroContainerRef = useRef(null)
-  const textRef = useRef(null)
-  const imgRef = useRef(null)
+  const handlePrev = () => {
+    slider1Ref.current?.slickPrev();
+    slider2Ref.current?.slickPrev();
+  };
 
+  const slickPrimary = {
+    // autoplay: true,
+    // autoplaySpeed: 4000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    speed: 1800,
+    cssEase: "cubic-bezier(.84, 0, 0.8, .99)",
+    asNavFor: slider2Ref.current,
+    centerMode: true,
+    arrows: false,
+    infinite: true,
+  };
 
-
-  useGSAP(() => {
-
-    gsap.set(textRef.current, { y: 80 })
-    gsap.set(imgRef.current, { y: 250, scale: 1.3 })
-
-    gsap.to(textRef.current, { y: 0, duration: 1, ease: 'power1.out' })
-    gsap.to(imgRef.current, { y: 0, scale: 1, duration: 1, ease: 'power1.out' })
-
-  }, { dependencies: [currentIdx], scope: heroContainerRef })
-
-
-
-
+  const slickSecondary = {
+    // autoplay: true,
+    // autoplaySpeed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1800,
+    cssEase: "cubic-bezier(.84, 0, 0.8, .99)",
+    asNavFor: slider1Ref.current,
+    centerMode: true,
+    arrows: false,
+  };
 
   return (
-    <section ref={heroContainerRef} className='flex flex-col lg:flex-row items-center lg:justify-between mt-24 pb-6 sm:pb-0 px-2 lg:px-8'>
+    <div className='mt-24'>
 
-      <div className='order-last lg:order-first md:w-1/2 h-1/2 md:h-full lg:pr-8'>
+      {/* Text Slider */}
+      <div className="absolute z-20 w-full top-[30%]">
+        <Slider {...slickSecondary} className="h-72 BebasNeue leading-14 " ref={slider2Ref}>
+          <div className="text-slide">
+            <h1>Ablessing for <br /> every skin</h1>
+          </div>
+          <div className="text-slide">
+            <h1>The perfect mix <br /> of old & new</h1>
+          </div>
+          <div className="text-slide">
+            <h1>A journey of border<br /> generations</h1>
+          </div>
+          <div className="text-slide">
+            <h1>You are the<br /> stylist</h1>
+          </div>
+          <div className="text-slide">
+            <h1>The fifth slide<br /> stylist</h1>
+          </div>
+        </Slider>
 
-        <div className='overflow-hidden PoiretOne text-4xl md:text-5xl leading-14'>
-          <p ref={textRef}>{text}</p>
+        {/* Arrows */}
+        <div className="absolute left-20 top-[70%] -translate-y-1/2 flex gap-4">
+          <button
+            className="border rounded-full text-xl px-4 py-2 cursor-pointer outline-none"
+            onClick={handleNext}
+          >
+            &#8592;
+          </button>
+          <button
+            className="border rounded-full text-xl px-4 py-2 cursor-pointer outline-none"
+            onClick={handlePrev}
+          >
+            &#8594;
+          </button>
         </div>
-
-
-
-        <a href="#_" class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-mono font-medium tracking-tighter text-white bg-[#E63098] rounded-lg group">
-          <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-violet-600 rounded-full group-hover:w-56 group-hover:h-56"></span>
-          <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
-          <span class="relative">Contact</span>
-        </a>
-
       </div>
 
-      {/* images part ************************/}
-      <div className='relative w-full md:w-1/2 h-1/2 md:h-full'>
-        <div className='absolute bottom-4 right-4 z-40 flex items-center text-end font-bold space-x-3'>
-          <p onClick={handlePrev} className='cursor-pointer text-lg bg-white text-[#091423] hover:text-[#E63098] active:text-violet-600 duration-300 px-2.5 rounded-md'>&#10094;</p>
-          <p onClick={handleNext} className='cursor-pointer text-lg bg-white text-[#091423]  hover:text-[#E63098] active:text-violet-600 duration-300 px-2.5 rounded-md'>&#10095;</p>
-        </div>
-
-        <div className='overflow-hidden rounded-3xl'>
-          <img
-            src={image}
-            alt="pic"
-            ref={imgRef}
-            className='w-full h-[60vh] lg:h-[80vh] object-cover object-center rounded-3xl'
-          />
-        </div>
+      {/* Blocks */}
+      <div className="blocks">
+        <div className="absolute z-10 h-screen w-[5%] left-[0%] bg-[#091423]"></div>
+        <div className="absolute z-10 h-screen w-[25%] left-[25%] bg-[#091423]"></div>
+        <div className="absolute z-10 h-screen w-[5%] right-[0%] bg-[#091423]"></div>
       </div>
 
-    </section>
-  )
-}
+      {/* Background Overlay */}
+      <div className="absolute z-10 left-[5%] w-[20%] h-[80vh] bg-black/80"></div>
 
-export default Details
+      {/* Image Slider */}
+      <Slider {...slickPrimary} className="w-full h-screen" ref={slider1Ref}>
+        <img src={img1} alt="pic" className='object-cover object-center h-[80vh] w-full' />
+        <img src={img2} alt="pic" className='object-cover object-center h-[80vh] w-full' />
+        <img src={img3} alt="pic" className='object-cover object-center h-[80vh] w-full' />
+        <img src={img4} alt="pic" className='object-cover object-center h-[80vh] w-full' />
+        <img src={img5} alt="pic" className='object-cover object-center h-[80vh] w-full' />
+      </Slider>
+    </div>
+  );
+};
+
+export default Projets;

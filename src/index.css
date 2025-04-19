@@ -33,16 +33,16 @@ body {
 
 /* font--------------------- */
 @font-face {
-  font-family: 'PoiretOne';
-  src: url(./fonts/PoiretOne.ttf) format('truetype');
+  font-family: 'Golos';
+  src: url(./fonts/Golos.ttf) format('truetype');
   font-display: swap;
 }
 
-.PoiretOne {
-  font-family: PoiretOne, sans-serif;
+.Golos {
+  font-family: Golos, sans-serif;
 }
 
-
+/* Montserrat */
 @font-face {
   font-family: 'Montserrat';
   src: url(./fonts/Montserrat.ttf) format('truetype');
@@ -53,17 +53,145 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+/* BebasNeue */
 @font-face {
-  font-family: 'PoiretOne';
-  src: url(./fonts/PoiretOne.ttf) format('truetype');
+  font-family: 'BebasNeue';
+  src: url(./fonts/BebasNeue.ttf) format('truetype');
   font-display: swap;
 }
 
-.PoiretOne {
-  font-family: PoiretOne, sans-serif;
+.BebasNeue {
+  font-family: BebasNeue, sans-serif;
+}
+
+/* Comfortaa */
+@font-face {
+  font-family: 'Comfortaa';
+  src: url(./fonts/Comfortaa.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Comfortaa {
+  font-family: Comfortaa, sans-serif;
+}
+
+/* ClashGrotesk */
+@font-face {
+  font-family: 'ClashGrotesk';
+  src: url(./fonts/ClashGrotesk.ttf) format('truetype');
+  font-display: swap;
+}
+
+.ClashGrotesk {
+  font-family: ClashGrotesk, sans-serif;
+}
+
+/* PolySans Neutral */
+@font-face {
+  font-family: 'PolySans Neutral';
+  src: url(./fonts/PolySans.ttf) format('truetype');
+  font-display: swap;
+}
+
+.PolySans  {
+  font-family: PolySans Neutral, sans-serif;
+}
+
+/* Braze */
+@font-face {
+  font-family: 'Braze';
+  src: url(./fonts/Braze.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Braze {
+  font-family: Braze, sans-serif;
+}
+
+/* Cropar */
+@font-face {
+  font-family: 'Cropar';
+  src: url(./fonts/Cropar.otf) format('opentype');
+  font-display: swap;
+}
+
+.Cropar {
+  font-family: Cropar, sans-serif;
+}
+
+/* Negusa */
+@font-face {
+  font-family: 'Negusa';
+  src: url(./fonts/Negusa.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Negusa {
+  font-family: Negusa, sans-serif;
+}
+
+/* Monthey */
+@font-face {
+  font-family: 'Monthey';
+  src: url(./fonts/Monthey.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Monthey {
+  font-family: Monthey, sans-serif;
+}
+
+/* OLIVERA  */
+@font-face {
+  font-family: 'OLIVERA';
+  src: url(./fonts/OLIVERA.ttf) format('truetype');
+  font-display: swap;
+}
+
+.OLIVERA {
+  font-family: OLIVERA, sans-serif;
+}
+
+/* Andox  */
+@font-face {
+  font-family: 'Andox';
+  src: url(./fonts/Andox.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Andox {
+  font-family: Andox, sans-serif;
+}
+
+/* Milestone  */
+@font-face {
+  font-family: 'Milestone';
+  src: url(./fonts/Milestone.ttf) format('truetype');
+  font-display: swap;
+}
+
+.Milestone {
+  font-family: Milestone, sans-serif;
 }
 
 
+
+
+/* slick slider----------------------------- */
+.slick-slide.slick-center {
+  transform: scale(1.2);
+  transition: transform .8s 1.4s cubic-bezier(.84, 0, .08, .99);
+}
+
+.slick-slide {
+  transition: transform .7s cubic-bezier(.84, 0, .08, .99);
+}
+
+.text-slide h1 {
+  padding: 18px 0;
+  font-size: 64px;
+  padding-left: 10%;
+}
 
 
 /* lenis-------------------------------------------------- */

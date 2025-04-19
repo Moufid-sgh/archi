@@ -5,6 +5,7 @@ import img3 from '/bureau-3.jpg'
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -42,8 +43,8 @@ const SelectedProjects = () => {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: image,
-                    start: "top 85%",
-                    end: "top 60%",
+                    start: "top 90%",
+                    end: "top 65%",
                     scrub: 1,
                     once: true,
                 }
@@ -55,9 +56,9 @@ const SelectedProjects = () => {
 
 
     return (
-        <div ref={projectRef} className='mt-48'>
+        <div ref={projectRef} className='mt-48 px-2 lg:px-8'>
             <div className="title-wrapper overflow-hidden">
-                <h1 className="title PoiretOne tracking-wide text-4xl lg:text-6xl font-bold text-center">
+                <h1 className="title PolySans tracking-wide text-4xl lg:text-7xl text-center">
                     Projets
                 </h1>
             </div>
@@ -67,7 +68,7 @@ const SelectedProjects = () => {
                     imgs.map((el, index) => {
                         return (
                             <div key={index} className='images relative h-[400px] w-auto group'>
-                                <div className='relative rounded-2xl text-[#091423] group-hover:scale-95 overflow-hidden duration-700 ease-out'>
+                                <div className='relative rounded-xl text-[#091423] group-hover:scale-95 overflow-hidden duration-700 ease-out'>
                                     <img src={el} alt="img" className='h-96 w-full object-cover rounded-2xl shadow-sm group-hover:scale-115 duration-700 ease-out'
                                     />
                                     {/* redirect */}

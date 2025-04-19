@@ -40,7 +40,7 @@ function Aura() {
 
       <section ref={containerRef} className="relative bg-white shadow-md rounded-2xl text-lg leading-10 w-full md:w-[70%] lg:w-[50%] p-8 lg:p-10 space-y-4">
         <div className='overflow-hidden text-center py-2 mb-6'>
-          <h1 ref={titleRef} className='PoiretOne font-bold text-5xl'>Aura</h1>
+          <h1 ref={titleRef} className='Golos font-bold text-5xl'>Aura</h1>
         </div>
 
         <div className="overflow-hidden">
