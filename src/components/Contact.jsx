@@ -1,21 +1,22 @@
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react'
-import SplitType from 'split-type';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { SplitText } from "gsap/SplitText";
 import { useRef } from "react";
 
-
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Contact = () => {
 
    const contactRef = useRef(null);
 
+
    useGSAP(() => {    
-    gsap.utils.toArray('.reveal').forEach(text => {
-        // Split text
-        let splitText = new SplitType(text, { type: 'words'})
+
+    const split = new SplitText(contactRef.current, { type: "words",});
       
         // Animation
-        gsap.from(splitText.words, {
+        gsap.from(split.words, {
           opacity: 0,
           y: 50,
           ease: 'power3.out',
@@ -29,12 +30,12 @@ const Contact = () => {
             once: true, 
           }
         })
-      })
+
     , { scope: contactRef }})
     
 
     return (
-        <div ref={contactRef} className="reveal mt-20 text-3xl lg:text-5xl leading-15 lg:leading-22 mb-24 px-2 lg:px-8">
+        <div ref={contactRef} className="mt-20 text-3xl lg:text-5xl leading-15 lg:leading-22 mb-24 px-2 lg:px-8">
             <p>Vous avez un projet en tête ? Parlons-en !</p>
             <div className='flex'>
                 <p>Envoyez-nous un message et nous reviendrons vers vous rapidement.

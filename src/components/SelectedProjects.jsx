@@ -5,6 +5,7 @@ import img3 from '/bureau-3.jpg'
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +59,7 @@ const SelectedProjects = () => {
     return (
         <div ref={projectRef} className='mt-48 px-2 lg:px-8'>
             <div className="title-wrapper overflow-hidden">
-                <h1 className="title PolySans tracking-wide text-4xl lg:text-7xl text-center">
+                <h1 className="title BebasNeue tracking-wide text-4xl lg:text-7xl text-center">
                     Projets
                 </h1>
             </div>
@@ -67,19 +68,14 @@ const SelectedProjects = () => {
                 {
                     imgs.map((el, index) => {
                         return (
-                            <div key={index} className='images relative h-[400px] w-auto group'>
-                                <div className='relative rounded-xl text-[#091423] group-hover:scale-95 overflow-hidden duration-700 ease-out'>
-                                    <img src={el} alt="img" className='h-96 w-full object-cover rounded-2xl shadow-sm group-hover:scale-115 duration-700 ease-out'
-                                    />
-                                    {/* redirect */}
-                                    <div className='absolute top-1.5 right-1.5 p-1.5 rounded-[12px] bg-white translate-y-[-45px] group-hover:translate-y-0 ease-out delay-200 duration-500'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h10m0 0v10m0-10L7 17" /></svg>
+                            <div key={index} className='images relative h-[420px] w-auto group'>
+                                <div className='relative text-[#091423] overflow-hidden'>
+                                    <img src={el} alt="img" className='h-[420px] w-full object-cover shadow-sm group-hover:scale-115 duration-700'/>
+
+                                    <div className='absolute bottom-0 flex items-center justify-center bg-gradient-to-b from-black/0 to-black/60 w-full h-full opacity-0 group-hover:opacity-100 duration-700 cursor-pointer'>
                                     </div>
 
-                                    {/* description */}
-                                    <div className='absolute left-0 right-0 bg-white rounded-[12px] border border-gray-300 shadow-sm font-semibold scale-95 py-2 px-3 translate-y-0 group-hover:translate-y-[-52px] ease-out delay-200 duration-500'>
-                                        Titre
-                                    </div>
+                                    <p className='BebasNeue absolute bottom-4 left-4 uppercase text-white text-4xl tracking-wide   group-hover:-translate-y-6  duration-700'>Projest ternes</p>
                                 </div>
                             </div>
                         )
@@ -89,10 +85,10 @@ const SelectedProjects = () => {
 
             <div className='text-center mt-16'>
                 <button className='border rounded-3xl cursor-pointer h-10 w-36 group overflow-hidden'>
-                    <div className='group-hover:-translate-y-10 duration-500 ease-in-out mt-1.5'>
+                    <Link to='/projets' className='block group-hover:-translate-y-10 duration-500 ease-in-out mt-1.5'>
                         <p>Voir plus</p>
                         <p className="text-[#091423] bg-white rounded-3xl w-full mt-2.5  py-2">Voir plus</p>
-                    </div>
+                    </Link>
                 </button>
             </div>
         </div>

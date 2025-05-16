@@ -23,13 +23,14 @@ body {
   margin: 0 auto;
   background: #091423;
   color: #fff;
-  /* color: #D3D8E1; */
-  /* background-image: url('/background.png'); */
+}
+
+.line {
+  overflow: hidden;
 }
 
 /* green (#00FFA9) */
 /* red (#E49366) */
-
 
 /* font--------------------- */
 @font-face {
@@ -187,11 +188,7 @@ body {
   transition: transform .7s cubic-bezier(.84, 0, .08, .99);
 }
 
-.text-slide h1 {
-  padding: 18px 0;
-  font-size: 64px;
-  padding-left: 10%;
-}
+
 
 
 /* lenis-------------------------------------------------- */

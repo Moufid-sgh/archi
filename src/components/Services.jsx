@@ -71,20 +71,20 @@ const Services = () => {
     { title: "CONSEIL EN IMMOBILIER D’ENTREPRISE", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." }]
 
     return (
-        <div ref={serviceRef} className="rounded-3xl w-full min-h-screen mt-6 lg:mt-8 pb-[50px]">
+        <div ref={serviceRef} className="w-full min-h-screen mt-6 lg:mt-8 pb-[50px]">
 
             <div className="title-wrapper mb-[470px] overflow-hidden">
-                <h1 className="title PolySans tracking-wide text-4xl lg:text-7xl text-center">
-                    Services
+                <h1 className="title BebasNeue tracking-wide text-4xl lg:text-7xl text-center">
+                    Expertises
                 </h1>
             </div>
 
             <div className="cards lg:w-[65%] mx-auto py-0 px-2 lg:px-[50px]">
 
                 {services.map((service, index) => (
-                    <div key={index} className="card-wrapper relative rounded-3xl shadow-lg w-full bg-white border border-gray-300 perspective-[500px] mb-52 last:mb-0">
+                    <div key={index} className="card-wrapper relative  shadow-lg w-full bg-white border border-gray-300 perspective-[500px] mb-52 last:mb-0">
                         <div className="card h-[370px] md:h-[300px] px-4 md:px20 flex flex-col items-start">
-                            <div className='lg:flex lg:items-end space-x-2 syne font-bold text-xl text-[#091423] md:text-2xl mb-8 mt-2'>
+                            <div className='PolySans lg:flex lg:items-end space-x-2 syne font-bold text-xl text-[#091423] md:text-2xl mb-8 mt-2'>
                                 <span className='text-5xl pt-1'>.0{index + 1}</span>
                                 <p>{service.title}</p>
                             </div>

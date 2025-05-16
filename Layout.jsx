@@ -3,6 +3,7 @@ import ScrollToTop from "./src/components/ScrollToTop";
 import useSmoothScroll from "./src/components/SmoothScroll ";
 import Footer from "./src/components/Footer";
 import Navbar from "./src/components/Navbar";
+import Preloader from "./src/components/Preloader";
 
 const Layout = () => {
 
@@ -14,7 +15,8 @@ const Layout = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <main className="relative PolySans page">
+      {/* <Preloader /> */}
+      <main className="relative Comfortaa page">
         <ScrollToTop />
         <Navbar />
         {isLoading && (
@@ -22,7 +24,7 @@ const Layout = () => {
             <p className="loader"></p>
           </div>
         )}
-            <div className="mb-20 page">
+            <div className=" page">
               <Outlet />
             </div>
         <Footer />

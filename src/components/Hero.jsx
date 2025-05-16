@@ -2,14 +2,17 @@ import { useRef, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "/slider-1.jpg";
-import img2 from "/slider-2.jpg";
-import img3 from "/slider-3.jpg";
-import img4 from "/slider-4.jpg";
-import img5 from "/slider-5.jpg";
+import img1 from "/slider-1.webp";
+import img2 from "/slider-2.webp";
+import img3 from "/slider-3.webp";
+import img4 from "/slider-4.webp";
+import img5 from "/slider-5.webp";
+import ImageComponent from "./ImageComponent";
 
 
 const Hero = () => {
+
+  const images = [img1, img2, img3, img4, img5]
 
   const slider1Ref = useRef(null);
   const slider2Ref = useRef(null);
@@ -42,6 +45,25 @@ const Hero = () => {
     centerMode: true,
     arrows: false,
     infinite: true,
+    swipe: false,
+    draggable: false,
+    touchMove: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '0%',
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '10%',
+        }
+      }
+    ]
   };
 
   const slickSecondary = {
@@ -54,68 +76,84 @@ const Hero = () => {
     asNavFor: slider1Ref.current,
     centerMode: true,
     arrows: false,
+    swipe: false,
+    draggable: false,
+    touchMove: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '8%',
+        }
+      }
+    ]
+
   };
 
   return (
     <div className='mt-24'>
-    
-    <div className="relative">
-      {/* Text Slider */}
-      <div className="absolute z-20 w-full top-[40%]">
-        <Slider {...slickSecondary} className="h-72 BebasNeue leading-14 " ref={slider2Ref}>
-          <div className="text-slide">
-            <h1>Ablessing for <br /> every skin</h1>
-          </div>
-          <div className="text-slide">
-            <h1>The perfect mix <br /> of old & new</h1>
-          </div>
-          <div className="text-slide">
-            <h1>A journey of border<br /> generations</h1>
-          </div>
-          <div className="text-slide">
-            <h1>You are the<br /> stylist</h1>
-          </div>
-          <div className="text-slide">
-            <h1>The fifth slide<br /> stylist</h1>
-          </div>
-        </Slider>
+
+      <div className="relative">
+        {/* Text Slider */}
+        <div className="absolute z-20 w-full top-[40%] left-20">
+          <Slider {...slickSecondary} className="h-72 BebasNeue leading-14 text-5xl lg:text-6xl" ref={slider2Ref}>
+            <div className="md:pl-[10%] py-8">
+              <h1>Ablessing for <br /> every skin</h1>
+            </div>
+            <div className="md:pl-[10%]  py-8">
+              <h1>The perfect mix <br /> of old & new</h1>
+            </div>
+            <div className="md:pl-[10%]  py-8">
+              <h1>A journey of<br /> generations</h1>
+            </div>
+            <div className="md:pl-[10%]  py-8">
+              <h1>You are the<br /> stylist</h1>
+            </div>
+            <div className="md:pl-[10%]  py-8">
+              <h1>The fifth slide<br /> stylist</h1>
+            </div>
+          </Slider>
+        </div>
 
         {/* Arrows */}
-        <div className="absolute left-20 top-[70%] -translate-y-1/2 flex gap-4">
+        <div className="absolute left-20  top-[70%] md:pl-[6%] -translate-y-1/2 flex gap-4 z-20 font-sans">
           <button
-            className="border rounded-full text-xl px-4 py-2 cursor-pointer outline-none"
+            className="border rounded-full p-3 cursor-pointer outline-none active:scale-95 duration-300"
             onClick={handleNext}
           >
-            &#8592;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
+            </svg>
           </button>
           <button
-            className="border rounded-full text-xl px-4 py-2 cursor-pointer outline-none"
+            className="border rounded-full p-3 cursor-pointer outline-none active:scale-95 duration-300"
             onClick={handlePrev}
           >
-            &#8594;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fillRule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clipRule="evenodd" />
+            </svg>
           </button>
         </div>
+
+        {/* Blocks */}
+        <div>
+          <div className="absolute z-10 h-screen w-[5%] left-[0%] bg-[#091423]"></div>
+          <div className="hidden md:block absolute z-10 h-screen w-[25%] left-[25%] bg-[#091423]"></div>
+          <div className="absolute z-10 h-screen w-[5%] right-[0%] bg-[#091423]"></div>
+        </div>
+
+        {/* Background Overlay */}
+        <div className="hidden lg:block absolute z-10 left-[5%] w-[20%] h-[80vh] bg-black/80"></div>
+
+        {/* Image Slider */}
+        <Slider {...slickPrimary} className="w-full h-screen" ref={slider1Ref}>
+          {
+            images.map((el, i) => {
+              return <img key={i} src={el} alt="pic" className='object-cover object-center h-[80vh]' />
+              // return <ImageComponent key={i} src={el} width={auto} height={auto} className='object-cover object-center h-[80vh]' />
+            })
+          }
+        </Slider>
       </div>
-
-      {/* Blocks */}
-      <div className="blocks">
-        <div className="absolute z-10 h-screen w-[5%] left-[0%] bg-[#091423]"></div>
-        <div className="absolute z-10 h-screen w-[25%] left-[25%] bg-[#091423]"></div>
-        <div className="absolute z-10 h-screen w-[5%] right-[0%] bg-[#091423]"></div>
-      </div>
-
-      {/* Background Overlay */}
-      <div className="absolute z-10 left-[5%] w-[20%] h-[80vh] bg-black/80"></div>
-
-      {/* Image Slider */}
-      <Slider {...slickPrimary} className="w-full h-screen" ref={slider1Ref}>
-        <img src={img1} alt="pic" className='object-cover object-center h-[80vh] w-full' />
-        <img src={img2} alt="pic" className='object-cover object-center h-[80vh] w-full' />
-        <img src={img3} alt="pic" className='object-cover object-center h-[80vh] w-full' />
-        <img src={img4} alt="pic" className='object-cover object-center h-[80vh] w-full' />
-        <img src={img5} alt="pic" className='object-cover object-center h-[80vh] w-full' />
-      </Slider>
-    </div>
     </div>
   );
 };

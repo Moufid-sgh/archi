@@ -7,6 +7,8 @@ import NotFound from './pages/NotFound';
 import Layout from '../Layout';
 import Aura from './pages/Aura';
 import Projets from './pages/Projets';
+import Expertises from './pages/Expertises';
+
 
 const router = createBrowserRouter([
   {
@@ -25,17 +27,13 @@ const router = createBrowserRouter([
         path: 'projets',
         element: <Projets />
       },
+      {
+        path: 'expertise',
+        element: <Expertises />
+      },
       // {
       //   path: 'recipe/:id',
       //   element: <Recipe />
-      // },
-      // {
-      //   path: 'about_us',
-      //   element: <AboutUs />
-      // },
-      // {
-      //   path: 'terms',
-      //   element: <Terms />
       // },
     ],
     errorElement: <NotFound />
