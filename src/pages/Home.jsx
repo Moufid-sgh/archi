@@ -1,5 +1,5 @@
 import BeforeServiceSlide from "../components/BeforeServiceSlide"
-import Contact from "../components/Contact"
+import ContactSection from "../components/ContactSection"
 import Hero from "../components/Hero"
 import SelectedProjects from "../components/SelectedProjects"
 import Services from "../components/Services"
@@ -15,7 +15,7 @@ const Home = () => {
       <BeforeServiceSlide />
       <Services />
       <SelectedProjects />
-      <Contact />
+      <ContactSection />
     </div>
   )
 }

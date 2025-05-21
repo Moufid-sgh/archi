@@ -21,7 +21,7 @@ const Navbar = () => {
         {name: "Aura", link: "/aura"}, 
         {name: "Projets", link: "/projets"}, 
         {name: "Expertises", link: "/expertise"}, 
-        {name: "Contact", link: "mailto:manelrachdi@hotmail.fr"} 
+        {name: "Contact", link: "/contact"} 
     ]
 
 
@@ -29,7 +29,7 @@ const Navbar = () => {
         <nav className="fixed top-0 w-full flex justify-between items-center px-2 lg:px-8 py-4 bg-transparent backdrop-blur-sm z-40">
 
             <Link to="/">
-                <p className="text-2xl font-bold Cropar tracking-wider text-[#E63098]">Mai'n</p>
+                <p translate="no" className="text-2xl font-bold Cropar tracking-wider text-[#E63098]">Mai'n</p>
             </Link>
 
             {/* hamburger-menu */}

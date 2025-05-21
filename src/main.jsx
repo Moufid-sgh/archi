@@ -8,6 +8,7 @@ import Layout from '../Layout';
 import Aura from './pages/Aura';
 import Projets from './pages/Projets';
 import Expertises from './pages/Expertises';
+import Contact from './pages/Contact';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: 'expertise',
         element: <Expertises />
+      },
+      {
+        path: 'contact',
+        element: <Contact />
       },
       // {
       //   path: 'recipe/:id',

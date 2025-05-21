@@ -21,7 +21,7 @@ const Services = () => {
             scrollTrigger: {
               trigger: ".title-wrapper",
               scrub: 1,
-              start: "top 80%",
+              start: "top 70%",
               end: "top 40%",
               once: true,
             }
@@ -71,7 +71,7 @@ const Services = () => {
     { title: "CONSEIL EN IMMOBILIER D’ENTREPRISE", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." }]
 
     return (
-        <div ref={serviceRef} className="w-full min-h-screen mt-6 lg:mt-8 pb-[50px]">
+        <div ref={serviceRef} className="w-full min-h-screen mt-10 lg:mt-20 pb-[50px]">
 
             <div className="title-wrapper mb-[470px] overflow-hidden">
                 <h1 className="title BebasNeue tracking-wide text-4xl lg:text-7xl text-center">

@@ -96,19 +96,19 @@ const Hero = () => {
 
       <div className="relative">
         {/* Text Slider */}
-        <div className="absolute z-20 w-full top-[40%] left-20">
-          <Slider {...slickSecondary} className="h-72 BebasNeue leading-14 text-5xl lg:text-6xl" ref={slider2Ref}>
+        <div translate="no" className="absolute z-20 w-full top-[40%] left-20">
+          <Slider {...slickSecondary} className="h-72 BebasNeue leading-12 md:leading-14 text-[44px] md:text-5xl lg:text-6xl" ref={slider2Ref}>
             <div className="md:pl-[10%] py-8">
-              <h1>Ablessing for <br /> every skin</h1>
+              <h1>SPACES WITH <br/> MEANING</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>The perfect mix <br /> of old & new</h1>
+              <h1>DES ESPACES <br/> QUI RAISONNENT</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>A journey of<br /> generations</h1>
+              <h1>MORE THAN <br/> A SAPCE A VISION</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>You are the<br /> stylist</h1>
+              <h1>WE DESIGN <br/> YOUR “WHY”</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
               <h1>The fifth slide<br /> stylist</h1>

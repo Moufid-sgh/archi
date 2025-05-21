@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const Contact = () => {
+const ContactSection = () => {
 
    const contactRef = useRef(null);
 
@@ -51,4 +51,4 @@ const Contact = () => {
 
 
 
-export default Contact
+export default ContactSection
