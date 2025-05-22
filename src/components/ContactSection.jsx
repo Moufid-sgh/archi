@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from "gsap/SplitText";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -39,10 +40,10 @@ const ContactSection = () => {
             <p>Vous avez un projet en tête ? Parlons-en !</p>
             <div className='flex'>
                 <p>Envoyez-nous un message et nous reviendrons vers vous rapidement.
-                        <a href="mailto:manelrachdi@hotmail.fr" 
+                        <Link to="/contact"
                             className='inline-block cursor-pointer ml-2 text-[#E63098] hover:text-violet-600 duration-500'>
                             Contactez-nous
-                        </a>
+                        </Link>
                 </p>
             </div>
         </div>
