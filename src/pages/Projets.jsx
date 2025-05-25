@@ -1,5 +1,3 @@
-import { gsap } from 'gsap'
-import { useGSAP } from '@gsap/react'
 import FirstSection from '../components/projets/FirstSection'
 
 const Projets = () => {

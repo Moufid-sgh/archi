@@ -98,7 +98,7 @@ const Contact = () => {
                 {/* svg for mobile------------------- */}
                 <svg ref={mobileSvgRef} className='size-48 ml-20 mt-4 lg:hidden' xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" version="1.1"  viewBox="200 200 600 500"><g strokeWidth="10" stroke="#d52c8a" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M250 322.54331970214844Q320 -29.456680297851562 400 472.54331970214844Q507 -101.45668029785156 550 622.5433197021484 " markerEnd="url(#SvgjsMarker1914)"></path></g><defs><marker markerWidth="4.5" markerHeight="4.5" refX="2.25" refY="2.25" viewBox="0 0 4.5 4.5" orient="auto" id="SvgjsMarker1914"><polygon points="0,5 1.6666666666666667,2.5 0,0 5,2.5" fill="#d52c8a"></polygon></marker></defs></svg>
 
-                <div>
+                <div className="hidden lg:block">
                     <p>Suivez-nous</p>
                     <ul className="flex items-center space-x-4">
                         <li className='hover:opacity-50 duration-300 cursor-pointer'>Linkedin</li>
@@ -109,7 +109,7 @@ const Contact = () => {
             </section>
 
 
-            <section className='lg:w-1/2 my-12 lg:my-0 lg:pl-8'>
+            <section className='lg:w-1/2 my-6 lg:my-0 lg:pl-8'>
                 <p className='text-2xl font-bold'>
                     Contactez-nous
                 </p>
@@ -131,7 +131,7 @@ const Contact = () => {
                     ></textarea>
                     <button
                         type="submit"
-                        className='bg-[#E63098] text-white rounded-md p-2 w-full hover:bg-[#d52c8a] transition duration-300'
+                        className='bg-[#E63098] text-white rounded-md p-2 w-full hover:bg-violet-600 transition duration-500 cursor-pointer'
                     >
                         Envoyer
                     </button>

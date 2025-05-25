@@ -14,35 +14,43 @@ const BeforeServiceSlide = () => {
 
 
     useGSAP(() => {
-        new SplitText("p", { type: "lines", linesClass: "lineChild" });
-        new SplitText("p", { type: "lines", linesClass: "lineParent" });
-        gsap.from(".lineChild", {
-            duration: 1,
-            y: 150,
-            stagger: 0.5,
-             scrollTrigger: {
+        new SplitText("p", {
+            type: "chars, lines",
+            mask: "lines",
+            autoSplit: true,
+            onSplit: (self) => {
+                return gsap.from(self.chars, {
+                    duration: 1,
+                    ease: "sine.inOut",
+                    yPercent: 150,
+                    stagger: 0.02,
+                    scrollTrigger: {
                         trigger: BeforeServiceRef.current,
                         start: 'center 80%',
                         end: 'bottom center',
                         toggleActions: 'play none none none',
-                        once: true, 
+                        once: true,
                     },
+                });
+            }
         });
+
     }, { scope: BeforeServiceRef });
 
 
     return (
-        <div ref={BeforeServiceRef}  className='h-fit flex flex-col px-2 lg:px-8 py-8'>
+        <div ref={BeforeServiceRef} className='h-fit flex flex-col px-2 lg:px-8 py-8'>
             <p className='BebasNeue text-6xl lg:text-8xl text-center '>
                 MAI’N votre partenaire expert pour l’aménagement de vos bureaux
             </p>
 
-            <p className='text-2xl lg:text-3xl text-center my-16'>
+            {/* <p className='text-2xl lg:text-3xl text-center my-16'>
                 Nous vous accompagnons dans le conseil immobilier, la conception et la réalisations de vos espaces de travail
-            </p>
+            </p> */}
 
-            <p className='text-2xl lg:text-3xl text-center'>
-                Nous donnons forme à l’invisible, votre “why”
+            <p className='text-lg lg:text-2xl text-center mt-28'>
+                Nous donnons forme à l’invisible, votre
+                <span className='text-[#E63098] text-3xl'>“</span> why <span className='text-[#E63098] text-3xl'>”</span>
             </p>
         </div>
     )
