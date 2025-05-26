@@ -22,11 +22,11 @@ const BeforeServiceSlide = () => {
                 return gsap.from(self.chars, {
                     duration: 1,
                     ease: "sine.inOut",
-                    yPercent: 150,
+                    yPercent: 170,
                     stagger: 0.02,
                     scrollTrigger: {
                         trigger: BeforeServiceRef.current,
-                        start: 'center 80%',
+                        start: 'center 85%',
                         end: 'bottom center',
                         toggleActions: 'play none none none',
                         once: true,
@@ -40,7 +40,7 @@ const BeforeServiceSlide = () => {
 
     return (
         <div ref={BeforeServiceRef} className='h-fit flex flex-col px-2 lg:px-8 py-8'>
-            <p className='BebasNeue text-6xl lg:text-8xl text-center '>
+            <p className='BebasNeue text-5xl lg:text-8xl text-center '>
                 MAI’N votre partenaire expert pour l’aménagement de vos bureaux
             </p>
 
