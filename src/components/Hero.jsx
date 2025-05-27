@@ -12,7 +12,7 @@ import ImageComponent from "./ImageComponent";
 
 const Hero = () => {
 
-  const images = [img1, img2, img3, img4, img5]
+  const images = [img1, img2, img3, img4]
 
   const slider1Ref = useRef(null);
   const slider2Ref = useRef(null);
@@ -102,16 +102,13 @@ const Hero = () => {
               <h1>SPACES WITH <br/> MEANING</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>DES ESPACES <br/> QUI RAISONNENT</h1>
+              <h1>One space <br/>One purpose</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
               <h1>MORE THAN <br/> A SAPCE A VISION</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
               <h1>WE DESIGN <br/> YOUR “WHY”</h1>
-            </div>
-            <div className="md:pl-[10%]  py-8">
-              <h1>The fifth slide<br /> stylist</h1>
             </div>
           </Slider>
         </div>

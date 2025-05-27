@@ -49,8 +49,8 @@ const BeforeServiceSlide = () => {
             </p> */}
 
             <p className='text-lg lg:text-2xl text-center mt-28'>
-                Nous donnons forme à l’invisible, votre
-                <span className='text-[#E63098] text-3xl'>“</span> why <span className='text-[#E63098] text-3xl'>”</span>
+                <span>Nous donnons forme à l’invisible, votre</span>
+                <span className='text-[#E63098] text-3xl pl-2'>“</span>why<span className='text-[#E63098] text-3xl'>”</span>
             </p>
         </div>
     )

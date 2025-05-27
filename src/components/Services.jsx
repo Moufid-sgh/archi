@@ -82,7 +82,7 @@ const Services = () => {
             <div className="cards lg:w-[65%] mx-auto py-0 px-2 lg:px-[50px]">
 
                 {services.map((service, index) => (
-                    <div key={index} className="card-wrapper relative  shadow-lg w-full bg-white border border-gray-300 perspective-[500px] mb-52 last:mb-0">
+                    <div key={index} className="card-wrapper relative rounded-md shadow-lg w-full bg-white border border-gray-300 perspective-[500px] mb-52 last:mb-0">
                         <div className="card h-[370px] md:h-[300px] px-4 md:px20 flex flex-col items-start">
                             <div className='PolySans lg:flex lg:items-end space-x-2 syne font-bold text-xl text-[#091423] md:text-2xl mb-8 mt-2'>
                                 <span className='text-5xl pt-1'>.0{index + 1}</span>

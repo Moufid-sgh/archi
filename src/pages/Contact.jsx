@@ -114,7 +114,7 @@ const Contact = () => {
                     Contactez-nous
                 </p>
 
-                <form className='flex flex-col items-center mt-4 space-y-6'>
+                <form className='flex flex-col items-center mt-4 space-y-6 text-black'>
                     <input
                         type="text"
                         placeholder="Nom"
