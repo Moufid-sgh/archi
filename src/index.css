@@ -177,7 +177,6 @@ body {
 
 
 
-
 /* slick slider----------------------------- */
 .slick-slide.slick-center {
   transform: scale(1.2);
@@ -187,7 +186,6 @@ body {
 .slick-slide {
   transition: transform .7s cubic-bezier(.84, 0, .08, .99);
 }
-
 
 
 

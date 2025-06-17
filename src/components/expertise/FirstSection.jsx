@@ -11,9 +11,10 @@ const FirstSection = () => {
     const imgContainerRef = useRef(null);
     const imgRef = useRef(null);
 
+
     useGSAP(() => {
         // Animation for image
-        let tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
+        const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
         tl.from(imgContainerRef.current, {
             yPercent: -100,
@@ -26,7 +27,7 @@ const FirstSection = () => {
                 duration: 1
             }, "-=1")
 
-        //Animation for text
+        // Animation for text
         new SplitText("p", {
             type: "lines",
             mask: "lines",
@@ -41,7 +42,6 @@ const FirstSection = () => {
             }
         });
 
-
     }, { scope: firstSectionRef });
 
 
@@ -51,26 +51,25 @@ const FirstSection = () => {
             <div ref={firstSectionRef} className='lg:flex items-center justify-between w-full mt-20 md:mt-40'>
                 <div className='mb-10 lg:mb-0 lg:w-1/2'>
                     <p className="text-8xl lg:text-9xl font-semibold BebasNeue mb-3">
-                        NOS PROJETS
+                        Expertises
                     </p>
-                    <p className='text-xl text-justify w-[380px] lg:w-[540px]'>
-                        Des espaces pensés pour l’usage, guidés par l’émotion et portés par une vision.
+                    <p className='text-xl text-justify w-[350px] lg:w-[470px]'>
+                        De la stratégie immobilière à la création de vos espaces, notre expertise couvre chaque étape de votre projet.
                     </p>
                 </div>
-                <div className='overflow-hidden' ref={imgContainerRef} >
+                <div className='overflow-hidden shadow' ref={imgContainerRef} >
                     <img src={mainImg} alt='img' ref={imgRef} />
                 </div>
             </div>
 
-            <div className='lg:flex items-start justify-between py-10 lg:py-40 px-2 lg:px-0 lg:w-2/3'>
-                <p translate="no" className='text-2xl font-semibold whitespace-nowrap'>We design your "why"</p>
-                <p className='text-xl lg:px-20 mt-8 lg:mt-0'>
-                    Chaque espace que nous concevons est une réponse sur-mesure
 
-                    aux besoins & à la rasion d'être de chacun de nos clients.
-
-                    Découvre nos projets vivants, porteurs de sens et de performance
-                </p>
+            <div className='lg:flex items-start justify-between pt-10 py-20 lg:py-40 px-2 lg:px-0 lg:w-[60%]'>
+                <p translate="no" className='text-2xl font-semibold whitespace-nowrap mb-4'>Full accompagnement:</p>
+                <ul className='list-disc text-xl lg:pr-28 mt-4 lg:mt-0 ml-4 lg:ml-0 space-y-1'>
+                    <li>Audit et conseil Immobilier</li>
+                    <li>Architecture d'intérieur</li>
+                    <li>AMO & Programmation</li>
+                </ul>
             </div>
         </div>
     )

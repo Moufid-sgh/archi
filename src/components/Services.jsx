@@ -53,7 +53,7 @@ const Services = () => {
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: wrapper,
-                    start: "top " + (170 + 57 * i),
+                    start: "top " + (190 + 120 * i),
                     end: "bottom 550",
                     endTrigger: serviceRef.current,
                     scrub: true,
@@ -65,13 +65,13 @@ const Services = () => {
         });
     }, { scope: serviceRef });
 
-    const services = [{ title: "AMO & PROGRAMMATION", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." },
-    { title: "ARCHITECTURE D'INTERIEURE", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." },
-    { title: "ACCOMPAGNEMENT AU CHANGEMENT", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." },
-    { title: "CONSEIL EN IMMOBILIER D’ENTREPRISE", description: "Programmation stratégique, fonctionnelle, architecturale et technique Schéma directeur immobilier. Assistance du MOA et du MOE dans le développement du projet." }]
+    const services = [{ title: "Audit et Conseil Immobilier", bgStyle: "bg-slate-50" },
+    { title: "ARCHITECTURE D'INTÉRIEUR", bgStyle: "bg-slate-100" },
+    { title: "AMO & PROGRAMMATION", bgStyle: "bg-slate-200" },
+    ]
 
     return (
-        <div ref={serviceRef} className="w-full min-h-screen mt-10 lg:mt-20 pb-[50px]">
+        <div ref={serviceRef} className="w-full min-h-screen mt-20 lg:mt-48 pb-[50px]">
 
             <div className="title-wrapper mb-[470px] overflow-hidden">
                 <h1 className="title BebasNeue tracking-wide text-4xl lg:text-7xl text-center">
@@ -82,20 +82,9 @@ const Services = () => {
             <div className="cards lg:w-[65%] mx-auto py-0 px-2 lg:px-[50px]">
 
                 {services.map((service, index) => (
-                    <div key={index} className="card-wrapper relative rounded-md shadow-lg w-full bg-white border border-gray-300 perspective-[500px] mb-52 last:mb-0">
-                        <div className="card h-[370px] md:h-[300px] px-4 md:px20 flex flex-col items-start">
-                            <div className='PolySans lg:flex lg:items-end space-x-2 syne font-bold text-xl text-[#091423] md:text-2xl mb-8 mt-2'>
-                                <span className='text-5xl pt-1'>.0{index + 1}</span>
+                    <div key={index} className="card-wrapper relative w-full text-[#091423] perspective-[500px] mb-52 last:mb-0">
+                        <div className={`card flex items-center justify-center text-center h-[180px] font-bold text-3xl lg:text-4xl rounded-lg shadow border border-gray-300 ${service.bgStyle} `}>
                                 <p>{service.title}</p>
-                            </div>
-                            <ul className='h-1/2 flex flex-col justify-center space-x-2 space-y-4 mb-4 pl-4 text-xl text-slate-700'>
-                                {service.description.split('. ').map((desc, i) => (
-                                    <li key={i}>
-                                        <span className='mr-1.5 text-[#E63098] font-bold'>&#10004;</span>
-                                        {desc}
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
                     </div>
                 ))}
