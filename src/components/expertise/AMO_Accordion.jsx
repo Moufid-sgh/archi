@@ -27,7 +27,7 @@ const AccordionItem = ({ title, content, objectif, isOpen, onClick }) => {
 };
 
 export default function Accordion() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const accordionData = [
     {

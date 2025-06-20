@@ -65,7 +65,7 @@ const Services = () => {
         });
     }, { scope: serviceRef });
 
-    const services = [{ title: "Audit et Conseil Immobilier", bgStyle: "bg-slate-50" },
+    const services = [{ title: "AUDIT ET CONSEIL IMMOBILIER", bgStyle: "bg-slate-50" },
     { title: "ARCHITECTURE D'INTÉRIEUR", bgStyle: "bg-slate-100" },
     { title: "AMO & PROGRAMMATION", bgStyle: "bg-slate-200" },
     ]

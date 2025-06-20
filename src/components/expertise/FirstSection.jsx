@@ -63,9 +63,9 @@ const FirstSection = () => {
             </div>
 
 
-            <div className='lg:flex items-start justify-between pt-10 py-20 lg:py-40 px-2 lg:px-0 lg:w-[60%]'>
-                <p translate="no" className='text-2xl font-semibold whitespace-nowrap mb-4'>Full accompagnement:</p>
-                <ul className='list-disc text-xl lg:pr-28 mt-4 lg:mt-0 ml-4 lg:ml-0 space-y-1'>
+            <div className='lg:flex items-start justify-between my-28 p-6 bg-gray-50  space-x-20 shadow rounded'>
+                <p translate="no" className='text-2xl font-bold whitespace-nowrap mb-4'>Full accompagnement :</p>
+                <ul className='list-disc decoration-[#E63098] marker:text-[#E63098] text-xl space-y-1 pl-4 lg:pl-0'>
                     <li>Audit et conseil Immobilier</li>
                     <li>Architecture d'intérieur</li>
                     <li>AMO & Programmation</li>
