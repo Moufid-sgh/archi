@@ -7,9 +7,9 @@ import SecondSection from '../components/expertise/SecondSection';
 gsap.registerPlugin(SplitText);
 
 
-const Expertises = () => {
+const Expertise = () => {
 
-  const expertisesRef = useRef(null);
+  const ExpertiseRef = useRef(null);
 
 
   return (
@@ -20,4 +20,4 @@ const Expertises = () => {
   )
 }
 
-export default Expertises
+export default Expertise

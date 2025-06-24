@@ -32,28 +32,8 @@ body {
 /* green (#00FFA9) */
 /* red (#E49366) */
 
+
 /* font--------------------- */
-@font-face {
-  font-family: 'Golos';
-  src: url(./fonts/Golos.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Golos {
-  font-family: Golos, sans-serif;
-}
-
-/* Montserrat */
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./fonts/Montserrat.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Montserrat {
-  font-family: Montserrat, sans-serif;
-}
-
 /* BebasNeue */
 @font-face {
   font-family: 'BebasNeue';
@@ -87,28 +67,6 @@ body {
   font-family: ClashGrotesk, sans-serif;
 }
 
-/* PolySans Neutral */
-@font-face {
-  font-family: 'PolySans Neutral';
-  src: url(./fonts/PolySans.ttf) format('truetype');
-  font-display: swap;
-}
-
-.PolySans  {
-  font-family: PolySans Neutral, sans-serif;
-}
-
-/* Braze */
-@font-face {
-  font-family: 'Braze';
-  src: url(./fonts/Braze.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Braze {
-  font-family: Braze, sans-serif;
-}
-
 /* Cropar */
 @font-face {
   font-family: 'Cropar';
@@ -119,62 +77,6 @@ body {
 .Cropar {
   font-family: Cropar, sans-serif;
 }
-
-/* Negusa */
-@font-face {
-  font-family: 'Negusa';
-  src: url(./fonts/Negusa.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Negusa {
-  font-family: Negusa, sans-serif;
-}
-
-/* Monthey */
-@font-face {
-  font-family: 'Monthey';
-  src: url(./fonts/Monthey.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Monthey {
-  font-family: Monthey, sans-serif;
-}
-
-/* OLIVERA  */
-@font-face {
-  font-family: 'OLIVERA';
-  src: url(./fonts/OLIVERA.ttf) format('truetype');
-  font-display: swap;
-}
-
-.OLIVERA {
-  font-family: OLIVERA, sans-serif;
-}
-
-/* Andox  */
-@font-face {
-  font-family: 'Andox';
-  src: url(./fonts/Andox.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Andox {
-  font-family: Andox, sans-serif;
-}
-
-/* Milestone  */
-@font-face {
-  font-family: 'Milestone';
-  src: url(./fonts/Milestone.ttf) format('truetype');
-  font-display: swap;
-}
-
-.Milestone {
-  font-family: Milestone, sans-serif;
-}
-
 
 
 /* slick slider----------------------------- */
@@ -290,6 +192,3 @@ html.lenis body {
   position: relative;
   will-change: transform;
 }
-
-
-

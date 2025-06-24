@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 import Layout from '../Layout';
 import Aura from './pages/Aura';
 import Projets from './pages/Projets';
-import Expertises from './pages/Expertises';
+import Expertise from './pages/Expertise';
 import Contact from './pages/Contact';
 
 
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'expertise',
-        element: <Expertises />
+        element: <Expertise />
       },
       {
         path: 'contact',

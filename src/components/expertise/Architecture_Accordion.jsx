@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import mainImg from '/projets-main.webp';
+import mainImg from '/expertise/expertiseMain-1000.webp';
 import bureau from '/bureau-2.jpg';
+import concept from '/expertise/concept-1000.webp';
+import mobilier from '/expertise/mobilier-1000.webp';
 
 // Le composant AccordionItem reste INCHANGÉ
 const AccordionItem = ({ title, subTitle, content, phrase, boldTitle1, subbBoldTitle1, content1, ou, boldTitle2, subbBoldTitle2, content2, objectif, isOpen, onClick }) => {
@@ -52,7 +54,8 @@ export default function Accordion() {
         "Bien plus qu’un simple agencement, notre approche réponds aux nouveaux usages et mêle architecture d’intérieur et space planning stratégique pour révéler le potentiel de vos environnements de travail."
       ].join('\n'),
       objectif: "From inside out",
-      image: mainImg
+      image: concept,
+      imageSrcSet: "/expertise/concept-400.webp 400w, /expertise/concept-1000.webp 1000w"
     },
     {
       title: "Accompagnement au changement",
@@ -86,7 +89,8 @@ export default function Accordion() {
         "On veille aux détails, on anticipe les imprévus, on garde le cap. Timing, budget, qualité"
       ].join('\n'),
       objectif: "Everything matters",
-      image: mainImg
+      image: mainImg,
+      imageSrcSet: "/expertise/expertiseMain-400.webp 400w, /expertise/expertiseMain-1000.webp 1000w"
     },
     {
       title: "Mobilier sur mesure",
@@ -97,7 +101,8 @@ export default function Accordion() {
         "Notre force : associer esthétique, fonctionnalité et personnalisation, pour un rendu fluide, cohérent et 100 % adapté à vos usages.",
         "Espace hybride, élégant ou convivial ? Nous orchestrons la juste combinaison de pièces fortes et de détails bien pensés pour un lieu vivant, efficace et inspirant."
       ],
-      image: bureau
+      image: mobilier,
+      imageSrcSet: "/expertise/mobilier-400.webp 400w, /expertise/mobilier-1000.webp 1000w"
     },
   ];
 
@@ -109,25 +114,31 @@ export default function Accordion() {
   return (
     <div className="w-full py-6">
       <div className="w-full mx-auto">
-        <div className='mb-6'>
+        <div className='mb-'>
           <p className='text-2xl text-violet-600 font-bold mb-2'>All-In-One</p>
-          <p className='mb-6'>Un seul interlocuteur du concept à la concrétisation.</p>
+          <p className=''>Un seul interlocuteur du concept à la concrétisation.</p>
         </div>
 
         <div className="lg:flex items-start justify-between space-x-6 py-6">
           {/*Image */}
-          <div className="md:w-1/2 mt-8 md:mt-0">
+          <div className="w-full md:w-1/2 mt-4 md:mt-0">
             <div className="sticky top-24">
               <img
-                src={openIndex !== null ? accordionData[openIndex].image : mainImg}
-                alt="Illustration"
+                src={openIndex !== null ? accordionData[openIndex].image : concept}
+                srcSet={
+                  openIndex !== null && accordionData[openIndex].imageSrcSet
+                    ? accordionData[openIndex].imageSrcSet
+                    : undefined
+                }
+                sizes="(max-width: 1024px) 400px, 500px"
+                alt="img"
                 className="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-lg transition-all duration-300"
               />
             </div>
           </div>
 
           {/* Accordéon */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 mt-6 md:mt-0">
             <div className="space-y-2">
               {accordionData.map((item, index) => (
                 <AccordionItem

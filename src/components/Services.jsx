@@ -65,25 +65,37 @@ const Services = () => {
         });
     }, { scope: serviceRef });
 
-    const services = [{ title: "AUDIT ET CONSEIL IMMOBILIER", bgStyle: "bg-slate-50" },
-    { title: "ARCHITECTURE D'INTÉRIEUR", bgStyle: "bg-slate-100" },
-    { title: "AMO & PROGRAMMATION", bgStyle: "bg-slate-200" },
+    // const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-violet-200 text-violet-500 " },
+    // { title: "Architecture d'intérieure", bgStyle: "bg-violet-400 text-violet-50" },
+    // { title: "AMO & programmation", bgStyle: "bg-violet-600 text-violet-100" },
+    // ]
+
+    // const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-white text-black border" },
+    // { title: "Architecture d'intérieure", bgStyle: "bg-white text-black border border-[#9E8DC3]" },
+    // { title: "AMO & programmation", bgStyle: "bg-white text-black border border-[#9E8DC3]" },
+    // ]
+
+    const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-[#091423] text-white border border-violet-600" },
+    { title: "Architecture d'intérieure", bgStyle: "bg-[#091423] text-white border border-violet-600" },
+    { title: "AMO & programmation", bgStyle: "bg-[#091423] text-white border border-violet-600" },
     ]
+
+
 
     return (
         <div ref={serviceRef} className="w-full min-h-screen mt-20 lg:mt-48 pb-[50px]">
 
             <div className="title-wrapper mb-[470px] overflow-hidden">
                 <h1 className="title BebasNeue tracking-wide text-4xl lg:text-7xl text-center">
-                    Expertises
+                    Expertise
                 </h1>
             </div>
 
             <div className="cards lg:w-[65%] mx-auto py-0 px-2 lg:px-[50px]">
 
                 {services.map((service, index) => (
-                    <div key={index} className="card-wrapper relative w-full text-[#091423] perspective-[500px] mb-52 last:mb-0">
-                        <div className={`card flex items-center justify-center text-center h-[180px] font-bold text-3xl lg:text-4xl rounded-lg shadow border border-gray-300 ${service.bgStyle} `}>
+                    <div key={index} className="card-wrapper relative w-full perspective-[500px] mb-52 last:mb-0">
+                        <div className={`card flex items-center justify-center text-center h-[180px] text-3xl lg:text-4xl rounded-lg shadow  ${service.bgStyle} `}>
                                 <p>{service.title}</p>
                         </div>
                     </div>

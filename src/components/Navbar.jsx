@@ -20,7 +20,7 @@ const Navbar = () => {
     const menu = [
         {name: "Aura", link: "/aura"}, 
         {name: "Projets", link: "/projets"}, 
-        {name: "Expertises", link: "/expertise"}, 
+        {name: "Expertise", link: "/expertise"}, 
         {name: "Contact", link: "/contact"} 
     ]
 
