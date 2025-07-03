@@ -70,15 +70,15 @@ const Services = () => {
     // { title: "AMO & programmation", bgStyle: "bg-violet-600 text-violet-100" },
     // ]
 
-    // const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-white text-black border" },
-    // { title: "Architecture d'intérieure", bgStyle: "bg-white text-black border border-[#9E8DC3]" },
-    // { title: "AMO & programmation", bgStyle: "bg-white text-black border border-[#9E8DC3]" },
-    // ]
-
-    const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-[#091423] text-white border border-violet-600" },
-    { title: "Architecture d'intérieure", bgStyle: "bg-[#091423] text-white border border-violet-600" },
-    { title: "AMO & programmation", bgStyle: "bg-[#091423] text-white border border-violet-600" },
+    const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-white text-black border" },
+    { title: "Architecture d'intérieure", bgStyle: "bg-white text-black border border-[#9E8DC3]" },
+    { title: "AMO & programmation", bgStyle: "bg-white text-black border border-[#9E8DC3]" },
     ]
+
+    // const services = [{ title: "Audit et conseil immobilier", bgStyle: "bg-[#091423] text-white border border-violet-600" },
+    // { title: "Architecture d'intérieure", bgStyle: "bg-[#091423] text-white border border-violet-600" },
+    // { title: "AMO & programmation", bgStyle: "bg-[#091423] text-white border border-violet-600" },
+    // ]
 
 
 

@@ -4,6 +4,7 @@ import useSmoothScroll from "./src/components/SmoothScroll ";
 import Footer from "./src/components/Footer";
 import Navbar from "./src/components/Navbar";
 import Preloader from "./src/components/Preloader";
+import GoToTopBtn from "./src/components/GoToTopBtn";
 
 const Layout = () => {
 
@@ -18,6 +19,7 @@ const Layout = () => {
       {/* <Preloader /> */}
       <main className="relative Comfortaa page">
         <ScrollToTop />
+        <GoToTopBtn />  
         <Navbar />
         {isLoading && (
           <div className="flex items-center justify-center min-h-screen">

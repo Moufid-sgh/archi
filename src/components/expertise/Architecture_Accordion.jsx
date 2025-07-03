@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import mainImg from '/expertise/expertiseMain-1000.webp';
-import bureau from '/bureau-2.jpg';
 import concept from '/expertise/concept-1000.webp';
 import mobilier from '/expertise/mobilier-1000.webp';
+import accompagnement from '/expertise/accompagnement-1000.webp';
+import travaux from '/expertise/travaux-1000.webp';
 
-// Le composant AccordionItem reste INCHANGÉ
-const AccordionItem = ({ title, subTitle, content, phrase, boldTitle1, subbBoldTitle1, content1, ou, boldTitle2, subbBoldTitle2, content2, objectif, isOpen, onClick }) => {
+
+
+const AccordionItem = ({ title, content, boldTitle1, subbBoldTitle1, content1, ou, boldTitle2, subbBoldTitle2, content2, objectif, isOpen, onClick }) => {
   return (
     <div className="border border-gray-200 rounded-lg mb-2 overflow-hidden">
       <button
@@ -22,8 +23,8 @@ const AccordionItem = ({ title, subTitle, content, phrase, boldTitle1, subbBoldT
           } overflow-hidden`}
       >
         <div className="px-6 py-4 bg-white">
-          <p className="font-semibold">{subTitle}</p>
-          {phrase && <p className='mt-2 underline decoration-[#E63098]'>{phrase}</p>}
+          {/* <p className="font-semibold">{subTitle}</p> */}
+          {/* {phrase && <p className='mt-2 underline decoration-[#E63098]'>{phrase}</p>} */}
           {boldTitle1 && <p className='font-bold text-xl mt-4'>{boldTitle1}</p>}
           {subbBoldTitle1 && <p className='font-bold italic mt-4'>{subbBoldTitle1}</p>}
           {content1 && <p className='whitespace-pre-line text-gray-700 my-4'>{content1}</p>}
@@ -32,7 +33,7 @@ const AccordionItem = ({ title, subTitle, content, phrase, boldTitle1, subbBoldT
           {subbBoldTitle2 && <p className='font-bold italic mt-4'>{subbBoldTitle2}</p>}
           {content2 && <p className='whitespace-pre-line text-gray-700 my-4'>{content2}</p>}
           {content && <p className='whitespace-pre-line text-gray-700 my-4'>{content}</p>}
-          <p className='text-end font-bold italic'>{objectif}</p>
+          <p className='text-end font-bold italic text-sm'>{objectif}</p>
         </div>
       </div>
     </div>
@@ -67,12 +68,14 @@ export default function Accordion() {
         "Un lieu prend tout son sens lorsque ceux qui y travaillent s’y reconnaissent."
       ].join('\n'),
       objectif: "let’s talk and move",
-      image: bureau
+      image: accompagnement,
+      imageSrcSet: "/expertise/accompagnement-400.webp 400w, /expertise/accompagnement-1000.webp 1000w"
+
     },
     {
       title: "Travaux & Coordination",
-      suTitle: "Two Choices. One quality.",
-      phrase: "Parce qu’un projet peut se piloter de plusieurs façons, on vous laisse choisir ce qui vous correspond.",
+      // suTitle: "Two Choices. One quality.",
+      // phrase: "Parce qu’un projet peut se piloter de plusieurs façons, on vous laisse choisir ce qui vous correspond.",
       boldTitle1: "MAI’N exécute et pilote.",
       subbBoldTitle1: "Contractant général",
       content1: [
@@ -86,11 +89,11 @@ export default function Accordion() {
       content2: [
         "Vous gardez la main sur les entreprises, on orchestre avec vous.",
         "On rédige les pièces de consultation des entreprises, on accompagne le choix des prestataires, et on suit l’exécution jusqu’à la réception en passant par le transfert.",
-        "On veille aux détails, on anticipe les imprévus, on garde le cap. Timing, budget, qualité"
+        "On veille aux détails, on anticipe les imprévus, on garde le cap. Timing, budget, qualité:"
       ].join('\n'),
       objectif: "Everything matters",
-      image: mainImg,
-      imageSrcSet: "/expertise/expertiseMain-400.webp 400w, /expertise/expertiseMain-1000.webp 1000w"
+      image: travaux,
+      imageSrcSet: "/expertise/travaux-400.webp 400w, /expertise/travaux-1000.webp 1000w"
     },
     {
       title: "Mobilier sur mesure",
@@ -112,12 +115,8 @@ export default function Accordion() {
 
 
   return (
-    <div className="w-full py-6">
+    <div className="w-full pb-6">
       <div className="w-full mx-auto">
-        <div className='mb-'>
-          <p className='text-2xl text-violet-600 font-bold mb-2'>All-In-One</p>
-          <p className=''>Un seul interlocuteur du concept à la concrétisation.</p>
-        </div>
 
         <div className="lg:flex items-start justify-between space-x-6 py-6">
           {/*Image */}
@@ -132,20 +131,24 @@ export default function Accordion() {
                 }
                 sizes="(max-width: 1024px) 400px, 500px"
                 alt="img"
-                className="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-lg transition-all duration-300"
+                className="w-full h-auto max-h-[500px] mt-6 lg:mt-[88px] object-cover rounded-lg shadow-lg transition-all duration-300"
               />
             </div>
           </div>
 
           {/* Accordéon */}
           <div className="md:w-1/2 mt-6 md:mt-0">
+            <div className='mb-6'>
+              <p className='text-2xl text-violet-600 font-bold mb-2'>All-In-One</p>
+              <p className=''>Un seul interlocuteur du concept à la concrétisation.</p>
+            </div>
             <div className="space-y-2">
               {accordionData.map((item, index) => (
                 <AccordionItem
                   key={index}
                   title={item.title}
-                  subTitle={item.suTitle}
-                  phrase={item.phrase}
+                  // subTitle={item.suTitle}
+                  // phrase={item.phrase}
                   boldTitle1={item.boldTitle1}
                   subbBoldTitle1={item.subbBoldTitle1}
                   content1={item.content1}
