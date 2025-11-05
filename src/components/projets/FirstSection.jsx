@@ -12,7 +12,7 @@ const FirstSection = () => {
     const imgRef = useRef(null);
 
     useGSAP(() => {
-        // Animation for image
+        // image animation
         let tl = gsap.timeline({ defaults: { ease: 'power1.out' } })
 
         tl.from(imgContainerRef.current, {
@@ -26,7 +26,7 @@ const FirstSection = () => {
                 duration: 1
             }, "-=1")
 
-        //Animation for text
+        // text animation
         new SplitText("p", {
             type: "lines",
             mask: "lines",
@@ -48,7 +48,7 @@ const FirstSection = () => {
     return (
         <div className='bg-white text-black min-h-screen lg:flex flex-col items-center'>
 
-            <div ref={firstSectionRef} className='lg:flex items-center justify-between w-full mt-20 md:mt-40'>
+            <div ref={firstSectionRef} className='lg:flex items-center justify-between w-full'>
                 <div className='mb-10 lg:mb-0 lg:w-1/2'>
                     <p className="text-8xl lg:text-9xl font-semibold BebasNeue mb-3">
                         NOS PROJETS
@@ -69,7 +69,7 @@ const FirstSection = () => {
 
                     aux besoins & à la rasion d'être de chacun de nos clients.
 
-                    Découvre nos projets vivants, porteurs de sens et de performance
+                    Découvrez nos projets vivants, porteurs de sens et de performance
                 </p>
             </div>
         </div>

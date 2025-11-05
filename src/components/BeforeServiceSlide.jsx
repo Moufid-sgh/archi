@@ -46,8 +46,7 @@ const BeforeServiceSlide = () => {
 
 
             <div className='lg:flex justify-center text-lg lg:text-2xl mt-32  text-center'>
-                <p>Nous donnons forme à l’invisible</p>
-                <p >votre “why”</p>
+                <p>Nous donnons forme à l’invisible votre “why”</p>
             </div>
         </div>
     )
