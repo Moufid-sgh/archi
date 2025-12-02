@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import { SplitText } from "gsap/SplitText";
+import Carousel from './Carousel';
 gsap.registerPlugin(SplitText);
 
 const Overlay = ({ isOpen, onClose, project }) => {
@@ -33,13 +34,13 @@ const Overlay = ({ isOpen, onClose, project }) => {
 
         //Animation text for desktop
         mm.add("(min-width: 1024px)", () => {
-           const split = new SplitText(".text", {
+            const split = new SplitText(".text", {
                 type: "lines",
                 mask: "lines",
-                autoSplit: true,    
+                autoSplit: true,
                 onSplit: (self) => {
                     return gsap.from(self.lines, {
-                        duration: 0.6,
+                        duration: 0.8,
                         ease: "sine.inOut",
                         yPercent: 100,
                         stagger: 0.05,
@@ -57,10 +58,10 @@ const Overlay = ({ isOpen, onClose, project }) => {
 
         //Animation text fro mobile
         mm.add("(max-width: 1024px)", () => {
-           const split = new SplitText(".text", {
+            const split = new SplitText(".text", {
                 type: "lines",
                 mask: "lines",
-                autoSplit: true,    
+                autoSplit: true,
                 onSplit: (self) => {
                     return gsap.from(self.lines, {
                         duration: 0.6,
@@ -84,58 +85,65 @@ const Overlay = ({ isOpen, onClose, project }) => {
 
 
 
+    const OPTIONS = { align: 'start' }
 
 
 
     return (
         <div
-            className={`fixed inset-0 z-50 overflow-y-auto transition-transform duration-700 ease-in-out bg-[#091423] text-white  w-full
+            className={`fixed inset-0 z-50 overflow-y-auto transition-transform duration-700 ease-in-out bg-white text-[#091423] w-full
                   ${isOpen ? 'translate-y-0 ease-out' : 'translate-y-full ease-in'}`}
         >
-            <div className="min-h-screen">
+            <div className='mb-24'>
                 <button
                     onClick={onClose}
-                    className="absolute right-6 top-4 text-white hover:text-[#E63098] duration-300 text-2xl font-bold cursor-pointer"
+                    className="absolute right-6 top-4 text-[#091423] hover:text-[#E63098] duration-300 text-2xl font-bold cursor-pointer"
                 >
                     ✕
                 </button>
 
-
-                <div ref={overlayRef} className="lg:flex items-start justify-between lg:px-20 px-2 mt-16">
+                <div ref={overlayRef} className="lg:flex items-start justify-between px-2 lg:px-20 mt-16">
                     {/* img */}
-                    <div ref={mainImgContainerRef} className="lg:w-1/2 w-auto h-[500px] flex justify-center lg:justify-end lg:order-2 mb-6 lg:mb-0 overflow-hidden">
+                    <div ref={mainImgContainerRef} className="lg:w-1/2 w-auto flex justify-center lg:justify-end lg:order-2 mb-6 lg:mb-0 overflow-hidden">
                         <img
                             src={project.img}
                             alt={project.name}
                             ref={mainImgRef}
-                            className=" object-cover origin-bottom h-full"
+                            className=" object-cover origin-bottom max-h-[550px]"
                         />
                     </div>
 
-                    <div className="lg:w-1/2 lg:order-1">
-                        <h2 className="BebasNeue text text-7xl lg:text-8xl font-bold mb-6">{project.name}</h2>
+                    <div className="lg:w-1/2 lg:order-1 lg:pr-8">
+                        <h2 className="BebasNeue text text-7xl lg:text-8xl font-bold mb-4">{project.name}</h2>
+                        {/* details */}
+                        <div className="flex items-center gap-10 mb-6">
+                            <p className="text font-bold text-xl">{project?.location}</p>
+                            <p className="text font-bold text-xl">{project?.surface}</p>
+                        </div>
                         {/* description */}
-                        <div className="whitespace-pre-line space-y-3">
+                        {/* <div className=" space-y-3 mx-auto">
                             {project?.description.map((paragraph, index) => (
-                                <p key={index} className="text">
+                                <p key={index} className="text text-justify leading-relaxed">
                                     {paragraph}
                                 </p>
                             ))}
+                        </div> */}
+                        <div className="max-w-prose mx-auto space-y-3 prose-justified">
+                            {project?.description.map((p, i) => (
+                                <p key={i} className="text-justify leading-relaxed">
+                                    {p.replace(/\n+/g, ' ')}
+                                </p>
+                            ))}
                         </div>
-                        {/* details */}
-                        <div className="flex items-center gap-10 mt-6">
-                            <div className="text">
-                                <p className="text-[#E63098]">adresse</p>
-                                <p className="font-bold text-xl">{project?.location}</p>
-                            </div>
-                            <div className='text'>
-                                <p className="text-[#E63098]">surface</p>
-                                <p className="font-bold text-xl">{project?.surface}</p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
+
+            <Carousel
+                slides={project.slideImgs}
+                options={OPTIONS}
+            />
 
         </div>
     );

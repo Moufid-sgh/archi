@@ -18,10 +18,10 @@ const Navbar = () => {
     }
 
     const menu = [
-        {name: "Aura", link: "/aura"}, 
-        {name: "Projets", link: "/projets"}, 
-        {name: "Expertise", link: "/expertise"}, 
-        {name: "Contact", link: "/contact"} 
+        { name: "Aura", link: "/aura" },
+        { name: "Projets", link: "/projets" },
+        { name: "Expertise", link: "/expertise" },
+        { name: "Contact", link: "/contact" }
     ]
 
 
@@ -29,8 +29,13 @@ const Navbar = () => {
         <nav className="fixed top-0 w-full flex justify-between items-center px-2 lg:px-8 py-4 bg-transparent backdrop-blur-sm z-40">
 
             <Link to="/">
-                <p translate="no" className="text-2xl font-bold Cropar tracking-wider text-[#E63098]">Mai'n</p>
-            </Link>
+                {
+                !isDarkPage
+                    ?
+                    <p translate="no" className="text-2xl font-bold Cropar tracking-wider text-white">Mai<span className="text-[#E63098]">&acute;</span>n</p>
+                    :
+                    <p translate="no" className="text-2xl font-bold Cropar tracking-wider text-black">Mai<span className="text-[#E63098]">&acute;</span>n</p>
+                }            </Link>
 
             {/* hamburger-menu */}
             <div
@@ -55,14 +60,13 @@ const Navbar = () => {
             <ul className="hidden lg:flex items-center space-x-8 tracking-wide">
                 {menu.map((item, index) => (
                     <li key={index} className="group overflow-hidden h-6">
-                        <Link 
-                            to={item.link} 
-                            className={`group-hover:-translate-y-7 block duration-500 ${
-                                isDarkPage ? 'text-black' : 'text-white'
-                            }`}
+                        <Link
+                            to={item.link}
+                            className={`group-hover:-translate-y-7 block duration-500 ${isDarkPage ? 'text-black' : 'text-white'
+                                }`}
                         >
                             <p>{item.name}</p>
-                            <p>{item.name}</p>
+                            <p className="text-violet-600">{item.name}</p>
                         </Link>
                     </li>
                 ))}

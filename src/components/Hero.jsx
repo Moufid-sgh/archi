@@ -96,7 +96,7 @@ const Hero = () => {
 
       <div className="relative">
         {/* Text Slider */}
-        <div translate="no" className="absolute z-20 w-full top-[40%] left-20">
+        <div translate="no" className="absolute z-20 w-full top-[45%] md:top-[40%] left-10 md:left-20">
           <Slider {...slickSecondary} className="h-72 BebasNeue leading-12 md:leading-14 text-[44px] md:text-5xl lg:text-6xl" ref={slider2Ref}>
             <div className="md:pl-[10%] py-8">
               <h1>SPACES WITH <br/> MEANING</h1>
@@ -114,7 +114,7 @@ const Hero = () => {
         </div>
 
         {/* Arrows */}
-        <div className="absolute left-20  top-[70%] md:pl-[6%] -translate-y-1/2 flex gap-4 z-20 font-sans">
+        <div className="absolute left-10 md:left-20 top-[70%] md:pl-[6%] -translate-y-1/2 flex gap-4 z-20 font-sans">
           <button
             className="border rounded-full p-3 cursor-pointer outline-none active:scale-95 duration-300"
             onClick={handleNext}
@@ -139,14 +139,14 @@ const Hero = () => {
         </div>
 
         {/* Background Overlay */}
-        <div className="hidden lg:block absolute z-10 left-[5%] w-[20%] h-[80vh] bg-black/80"></div>
+        {/* <div className="hidden lg:block absolute z-10 left-[5%] w-[20%] h-[80vh] bg-black/80"></div> */}
+        <div className="block absolute z-10 left-[5%] w-[90%] h-[80.5vh] bg-black/15 md:w-[20%] md:h-[80vh] md:bg-black/80"></div>
 
         {/* Image Slider */}
         <Slider {...slickPrimary} className="w-full h-screen" ref={slider1Ref}>
           {
             images.map((el, i) => {
               return <img key={i} src={el} alt="pic" className='object-cover object-center h-[80vh]' />
-              // return <ImageComponent key={i} src={el} width={auto} height={auto} className='object-cover object-center h-[80vh]' />
             })
           }
         </Slider>
