@@ -225,7 +225,7 @@ export const data = [
         img: chaumette,
         slideImgs: [chaumette_2, chaumette_3, chaumette_4, chaumette_5, chaumette_6, chaumette_7, chaumette_8, chaumette_9, chaumette_10],
         category: "Bureaux",
-        location: "",
+        location: "Grigny",
         surface: "56m²",
         description: [
             "MAI'N a transformé un espace de bureau standard en un showroom dédié aux ustensiles de cuisine haut de gamme.",

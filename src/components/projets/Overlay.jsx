@@ -56,7 +56,7 @@ const Overlay = ({ isOpen, onClose, project }) => {
             };
         });
 
-        //Animation text fro mobile
+        //Animation text for mobile
         mm.add("(max-width: 1024px)", () => {
             const split = new SplitText(".text", {
                 type: "lines",
@@ -130,7 +130,7 @@ const Overlay = ({ isOpen, onClose, project }) => {
                         </div> */}
                         <div className="max-w-prose mx-auto space-y-3 prose-justified">
                             {project?.description.map((p, i) => (
-                                <p key={i} className="text-justify leading-relaxed">
+                                <p key={i} className="text text-justify leading-relaxed">
                                     {p.replace(/\n+/g, ' ')}
                                 </p>
                             ))}

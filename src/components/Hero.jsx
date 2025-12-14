@@ -116,14 +116,14 @@ const Hero = () => {
         {/* Arrows */}
         <div className="absolute left-10 md:left-20 top-[70%] md:pl-[6%] -translate-y-1/2 flex gap-4 z-20 font-sans">
           <button
-            className="border rounded-full p-3 cursor-pointer outline-none active:scale-95 duration-300"
+            className="border rounded-full p-3 cursor-pointer outline-none hover:text-[#E63098] active:scale-95 duration-300"
             onClick={handleNext}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.5 12h-15m0 0l5.625-6M4.5 12l5.625 6" />
             </svg>
           </button>
           <button
-            className="border rounded-full p-3 cursor-pointer outline-none active:scale-95 duration-300"
+            className="border rounded-full p-3 cursor-pointer outline-none hover:text-[#E63098] active:scale-95 duration-300"
             onClick={handlePrev}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" fillRule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clipRule="evenodd" />

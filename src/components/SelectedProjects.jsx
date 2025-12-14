@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect, Suspense } from 'react';
 import img1 from '/house.jpg'
 import img2 from '/bureau-2.jpg'
 import img3 from '/bureau-3.jpg'
@@ -6,6 +6,8 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
+import { dataSelectedProjects } from '../dataSelectedProjects';
+import Overlay from './projets/Overlay';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,10 +35,10 @@ const SelectedProjects = () => {
                 scrub: 1,
                 once: true,
             }
-        }); 
+        });
 
-         // Images animation with stagger
-         images.forEach((image, i) => {
+        // Images animation with stagger
+        images.forEach((image, i) => {
             gsap.to(image, {
                 y: 0,
                 opacity: 1,
@@ -51,9 +53,43 @@ const SelectedProjects = () => {
                 }
             });
         });
-       
+
 
     }, { scope: projectRef });
+
+
+    //handle overlay
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isOpen]);
+
+    const handleOpenOverlay = (project) => {
+        setSelectedProject(project);
+
+        setTimeout(() => {
+            setIsOpen(true);
+        }, 10);
+    };
+
+
+    const handleCloseOverlay = () => {
+        setIsOpen(false);
+
+        setTimeout(() => {
+            setSelectedProject(null);
+        }, 1000);
+    };
 
 
     return (
@@ -64,24 +100,51 @@ const SelectedProjects = () => {
                 </h1>
             </div>
 
-            <section className='lg:flex items-center justify-between mt-12 lg:mt-24 space-y-12 lg:space-y-0'>
+            <section className='mt-12 lg:mt-16 grid grid-cols-1 gap-12 lg:grid-cols-4'>
                 {
-                    imgs.map((el, index) => {
+                    dataSelectedProjects.map((el, index) => {
+                        const isFirst = index === 0;
+
+                        const cardLgWidthClass = isFirst
+                            ? 'lg:col-span-2' // Paysage 
+                            : 'lg:col-span-1'; // Portrait 
+
+                        const heightClass = 'h-[440px]';
+
                         return (
-                            <div key={index} className='images relative h-[420px] w-auto group'>
-                                <div className='relative text-[#091423] overflow-hidden'>
-                                    <img src={el} alt="img" className='h-[420px] w-full object-cover shadow-sm group-hover:scale-115 duration-700'/>
+                            <div
+                                key={index}
+                                className={`images relative group ${heightClass} ${cardLgWidthClass}`}
+                                onClick={() => handleOpenOverlay(el)}
+                            >
+                                <div className='relative text-[#091423] overflow-hidden h-full'>
+                                    <img
+                                        src={el.img}
+                                        alt={el.name}
+                                        className={`${heightClass} w-full object-cover shadow-sm group-hover:scale-115 duration-700`}
+                                    />
 
                                     <div className='absolute bottom-0 flex items-center justify-center bg-gradient-to-b from-black/0 to-black/60 w-full h-full opacity-0 group-hover:opacity-100 duration-700 cursor-pointer'>
                                     </div>
 
-                                    <p className='BebasNeue absolute bottom-4 left-4 uppercase text-white text-4xl tracking-wide   group-hover:-translate-y-6  duration-700'>Projest ternes</p>
+                                    <p className='BebasNeue absolute bottom-4 left-4 uppercase text-white text-4xl tracking-wide group-hover:-translate-y-6 duration-700'>{el.name}</p>
                                 </div>
                             </div>
                         )
                     })
                 }
             </section>
+
+            {selectedProject && (
+                <Suspense fallback={null}>
+                    <Overlay
+                        isOpen={isOpen}
+                        onClose={handleCloseOverlay}
+                        project={selectedProject}
+                    />
+                    /
+                </Suspense>
+            )}
 
             <div className='text-center mt-16'>
                 <button className='border rounded-3xl cursor-pointer h-10 w-36 group overflow-hidden'>

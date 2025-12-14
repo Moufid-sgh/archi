@@ -23,7 +23,7 @@ const Footer = () => {
         </ul>
       </div>
       <div>
-        <p className='text-xl font-bold Cropar'>Manel Archi Immo </p>
+        <p translate="no" className="text-2xl font-bold Cropar tracking-wider text-white">Mai<span className="text-[#E63098]">&acute;</span>n</p>
         <p className='font-sans text-sm'>©{new Date().getFullYear()} Tous droits réservés</p>
       </div>
     </footer>
