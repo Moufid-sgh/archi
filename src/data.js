@@ -83,7 +83,7 @@ import jhon_richemond from "/jhon_richemond/1.webp";
 import jhon_richemond_2 from "/jhon_richemond/2.webp";
 import jhon_richemond_3 from "/jhon_richemond/3.webp";
 import jhon_richemond_4 from "/jhon_richemond/4.webp";
-import jhon_richemond_5 from "/jhon_richemond/4.webp";
+import jhon_richemond_5 from "/jhon_richemond/5.webp";
 import maison_abid from "/maison_abid/1.webp";
 import maison_abid_2 from "/maison_abid/2.webp";
 import maison_abid_3 from "/maison_abid/3.webp";
@@ -113,9 +113,9 @@ export const data = [
         surface: "1200 m²",
         description: [
             "Dans le cadre de son expansion, Franco Suisse, acteur emblématique de l’immobilier résidentiel haut de gamme depuis 1963, a confié à MAI’N la conception et l’aménagement de ses nouveaux bureaux.",
-            "Symbole d’un savoir-faire architectural à la française, Franco Suisse incarne la devise « Bâtir l’excellence », où élégance, raffinement & pérennité définissent chaque projet.",
-            "Inspirée par cet Aura, MAI’N a conçu un workspace à la hauteur de cette exigence : un lieu intemporel, baigné de lumière et pensé dans le moindre détail.",
-            "Un projet à l’image de Franco Suisse où l’art de bâtir rencontre l’art de travailler."
+            "Symbole d’un savoir-faire architectural à la française, la société incarne la devise « Bâtir l’excellence », où élégance, raffinement & pérennité définissent chaque projet.",
+            "Game plan : Transcender cette aura pour concevoir des workspaces à la hauteur de son exigence. des espaces intemporels, conçus dans les moindres détails.",
+            "The idea : Des bureaux où l’art de bâtir rencontre l’art de travailler."
         ],
     },
     {
@@ -127,10 +127,10 @@ export const data = [
         surface: "21.000 m²",
         description: [
             "MAI’N conçoit et aménage les 6 étages de  bureaux de l’ACOSS, filiale de l’URSSAF, à Montreuil.",
-            "L’ACOSS (Agence centrale des organismes de sécurité sociale), tête de réseau de l’URSSAF, est une institution en constante évolution. Ses équipes connaissent des mouvements réguliers, nécessitant une adaptation continue des environnements de travail aux nouveaux usages.",
+            "L’ACOSS , tête de réseau de l’URSSAF, est une institution en constante évolution. Ses équipes connaissent des mouvements réguliers, nécessitant une adaptation continue des environnements de travail aux nouveaux usages.",
             "C’est dans ce contexte que MAI’N a été sollicitée pour repenser les espaces, accompagnant l’ACOSS dans sa transition vers des modes de travail plus collaboratifs et flexibles.",
-            "The game plan : Réinventer les étages en Injectant de la couleur et créer des workspaces uniques, à l'identité forte.",
-            "THE IDEA:  Allier parfaitement fonctionnalité,  identité visuelle et confort dans chaque étage"
+            "Game plan : Réinventer les étages en Injectant de la couleur et créer des workspaces collaboratifs et flexibles",
+            "The idea :  Allier parfaitement fonctionnalité,  identité visuelle et confort dans chaque étage"
         ]
     },
     {
@@ -141,10 +141,10 @@ export const data = [
         location: "Paris 15",
         surface: "3500 m²",
         description: [
-            "MAI'N a pris en charge le réaménagement complet de 5 étages de bureaux pour Formiris, dont les espaces n'avaient pas été rénovés depuis 2009.",
-            "Face à des locaux obsolètes, la mission était claire : tout repenser. Des cloisonnements aux faux plafonds, en passant par les revêtements de sols et l'ensemble du concept de travail, chaque élément a été repensé pour s'adapter aux nouvelles façons de collaborer.",
-            "Game plan : Réaliser cette transformation complète dans un délai très serré, en concevant des espaces modernes et parfaitement adaptés aux besoins actuels.",
-            "The idea : Privilégier des open spaces favorisant le travail collaboratif, sans compromis sur le confort acoustique. Un environnement repensé pour allier performance collective et bien-être au quotidien."
+            "MAI’N a pris en charge le réaménagement complet de 5 étages de bureaux pour Formiris, dont les espaces n'avaient pas été rénovés depuis 2009.",
+            "Face à des locaux obsolètes, la mission était claire : tout repenser. Des cloisonnements aux faux plafonds, en passant par les revêtements de sols",
+            "Game plan : Réaliser cette transformation complète dans un délai très serré.",
+            "The idea : Privilégier des open spaces favorisant le travail collaboratif, sans compromis sur le confort acoustique."
 
         ]
     },
@@ -171,10 +171,9 @@ export const data = [
         location: "Boulevard Hausman Paris 8",
         surface: "95 m²",
         description: [
-            "MAI'N a transformé un ancien local commercial en un cabinet dentaire maîtrisant les contraintes liées au changement de destination.",
-            "Au-delà de la technique, notre approche a guidé chaque choix : des matériaux aux ambiances lumineuses, tout a été pensé pour déstigmatiser l'univers dentaire, transformer l'expérience du patient et valoriser l'image de marque du praticien.",
-            "Game plan :Repenser intégralement l'espace en s'adaptant aux spécificités d'un local qui n'était pas initialement prévu pour cet usage. Au programme : conception sur-mesure, sélection de matériaux innovants et résolution de défis techniques majeurs en plomberie et électricité.",
-            "The idea : Créer un univers unique et entièrement personnalisé pour le cabinet, où le design sert à la fois l'expérience patient et le confort de travail de l'équipe soignante. Ambiance épurée et chaleureuse,, avec une attention particulière portée à l'accueil et au parcours patient."
+            "MAI’N a transformé un ancien local commercial en un cabinet dentaire maîtrisant les contraintes liées au changement de destination.",
+            "Game plan : Repenser intégralement l'espace en s'adaptant aux spécificités d'un local qui n'était pas initialement prévu pour cet usage. Résolution de défis techniques majeurs en plomberie et électricité.",
+            "The idea : Créer un univers unique et entièrement personnalisé pour le cabinet, où le design sert à la fois l'expérience patient et le confort de travail de l'équipe soignante.",
         ]
     },
     {
@@ -187,8 +186,8 @@ export const data = [
         description: [
             "MAI’N conçoit et aménage les bureaux d’Euroapi, filiale du groupe Sanofi.",
             "Euroapi, incarne l’excellence industrielle et scientifique d’une entreprise tournée vers l’innovation et la performance. Alors qu’elle affirme son autonomie et structure sa nouvelle identité, la marque souhaitait des espaces reflétant ses valeurs et accompagnant ses équipes vers une nouvelle dynamique ",
-            "The game plan: créer des espaces ouverts, lumineux et connectés, favorisant la collaboration tout en integrant des zones de concentration et de bien-être",
-            "The Idea: Un environnement à l’image d’Euroapi ou science et design s'harmonisent dans un cadre sobre, fonctionnel et inspirant. Chaque détail a été pensé pour valoriser cette identité unique."
+            "Game plan : créer des espaces ouverts, lumineux et connectés, favorisant la collaboration tout en integrant des zones de concentration et de bien-être",
+            "The idea : Un environnement à l’image d’Euroapi ou science et design s'harmonisent dans un cadre sobre, fonctionnel et inspirant. Chaque détail a été pensé pour valoriser cette identité unique."
         ]
     },
     {
@@ -200,9 +199,8 @@ export const data = [
         surface: "82 m²",
         description: [
             "L’intervention de MAI’Nsur la boutique John Richmond consiste à transformer un espace brut et vétuste en une boutique de luxe contemporaine, à l’image de la marque.",
-            "The Game Plan : révéler le potentiel architectural du lieu tout en respectant son caractère d’origine.",
-            "The Idea",
-            "Le projet a impliqué une rénovation complète : mise aux normes, reprise des sols, plafonds et menuiseries, création d’un nouvel escalier, et une repensée intégrale des volumes.",
+            "Game Plan : révéler le potentiel architectural du lieu tout en respectant son caractère d’origine.",
+            "The idea : Le projet a impliqué une rénovation complète : mise aux normes, reprise des sols, plafonds et menuiseries, création d’un nouvel escalier, et une repensée intégrale des volumes.",
             "MAI’N a insufflé un design audacieux et sophistiqué, mêlant élégance italienne et modernité, pour offrir une expérience client immersive et raffinée.",
         ]
     },
@@ -216,7 +214,7 @@ export const data = [
         description: [
             "L'Élégance Futuriste : Un Écrin Minéral pour Paco Rabanne Rue du faubourg Saint-Honoré.",
             "La mission de MAI’N a été de concevoir un écrin pour la maison Paco Rabanne sur la prestigieuse rue Saint-Honoré, en réinterprétant ses codes futuristes à travers le prisme d'un classicisme parisien épuré.",
-            "Game plan: créér un dialogue entre le concept « Classique Parisien Minimaliste » l'héritage architectural parisien et la vision avant-gardiste de la marque. ",
+            "Game plan : créér un dialogue entre le concept « Classique Parisien Minimaliste » l'héritage architectural parisien et la vision avant-gardiste de la marque. ",
             "The idea : incarner l'ADN de la maison. Proposer une expérience où le style architectural répond à la modernité intemporelle de Paco Rabanne, créant un lieu unique qui honore à la fois son adresse parisienne et son statut de leader de la mode avancée.",
         ]
     },
@@ -228,7 +226,7 @@ export const data = [
         location: "Grigny",
         surface: "56m²",
         description: [
-            "MAI'N a transformé un espace de bureau standard en un showroom dédié aux ustensiles de cuisine haut de gamme.",
+            "MAI’N a transformé un espace de bureau standard en un showroom dédié aux ustensiles de cuisine haut de gamme.",
             "Notre approche a guidé chaque détail : des éclairages muséaux qui subliment les produits aux îlots thématiques qui racontent l'art de la cuisine, tout a été conçu pour émerveiller la clientèle et inspirer les passionnés de gastronomie.",
             "Game plan : Repenser intégralement l'espace pour répondre aux exigences spécifiques d'un showroom culinaire. La conception est sur-mesure: sélection de matériaux premium et création d'une scénographie immersive qui met en valeur chaque produit.",
             "The idea : Créer un univers sensoriel unique où les visiteurs vivent une véritable expérience culinaire dès l'entrée.",
@@ -243,9 +241,9 @@ export const data = [
         surface: "87 m²",
         description: [
             "Dans ce bel appartement traversant, MAI’N a imaginé un nouvel équilibre entre fonctionnalité, lumière et caractère, afin d’offrir à une jeune famille un espace fluide et chaleureux, fidèle à l’esprit du lieu.",
-            `The Game Plan: Réorganiser les volumes pour mieux vivre l’espace.
+            `Game plan : Réorganiser les volumes pour mieux vivre l’espace.
  Le projet a consisté à redistribuer les pièces, intégrer du rangement et ouvrir les perspectives, afin de laisser la lumière naturelle circuler librement et révéler le potentiel de chaque mètre carré.`,
-            `The Idea: Conjuguer charme de l’ancien et l’esprit contemporain.
+            `The idea : Conjuguer charme de l’ancien et l’esprit contemporain.
  Les moulures et le parquet ont été préservés, tandis que des niches, arcs et cloisons vitrées ont été créés pour apporter une touche graphique et actuelle.`,
         ]
     },
@@ -258,8 +256,8 @@ export const data = [
         surface: "140 m²",
         description: [
             "Le réaménagement de la maison ABID allie radicalement fonction et émotion. D'un agencement optimisé pour la lumière et le mouvement émerge une atmosphère à la fois épurée et profondément chaleureuse. Ce projet incarne un équilibre parfait entre lignes nettes et textures sensorielles, pour un résultat résolument moderne et accueillant.",
-            "Game plan: reconfigurer les espaces  et créer un dialogue entre les matériaux et les couleurs.",
-            "The idea: créer un écrin moderne où le bien-être naît de la parfaite harmonie entre l'épure et la chaleur",
+            "Game plan : reconfigurer les espaces  et créer un dialogue entre les matériaux et les couleurs.",
+            "The idea : créer un écrin moderne où le bien-être naît de la parfaite harmonie entre l'épure et la chaleur",
         ]
     },
     {
@@ -271,9 +269,9 @@ export const data = [
         surface: "96 m²",
         description: [
             "De jeunes propriétaires ont investi dans cette superbe maison pleine de potentiel dont l’aménagement initial ne répondait plus aux standards actuels ni à leurs besoins quotidiens. MAI’N a été missionnée pour repenser intégralement les espaces et révéler l’élégance contemporaine du lieu.",
-            "The Game Plan: Moderniser en profondeur tout en redonnant de la fonctionnalité aux espaces.",
+            "Game plan : Moderniser en profondeur tout en redonnant de la fonctionnalité aux espaces.",
             "L’intervention a nécessité une restructuration complète : révision de l’électricité, des plafonds, des revêtements de sol, de la cuisine et de l’escalier afin de créer un cadre de vie cohérent, confortable et fluide.",
-            "The Idea:  Une rénovation complète pensée pour transformer la maison en un véritable refuge contemporain, à l’image de ceux qui l’habitent."
+            "The idea :  Une rénovation complète pensée pour transformer la maison en un véritable refuge contemporain, à l’image de ceux qui l’habitent."
         ]
     },
 ];

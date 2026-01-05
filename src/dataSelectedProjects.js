@@ -26,21 +26,6 @@ import paco_rabane_5 from "/paco_rabane/5.webp";
 
 export const dataSelectedProjects = [
     {
-        name: "LIPPMANN",
-        img: lippmann,
-        slideImgs: [lippmann_2, lippmann_3, lippmann_4, lippmann_5, lippmann_6, lippmann_7, lippmann_8, lippmann_9, lippmann_10],
-        category: "Habitation",
-        location: "Paris 12e",
-        surface: "87 m²",
-        description: [
-            "Dans ce bel appartement traversant, MAI’N a imaginé un nouvel équilibre entre fonctionnalité, lumière et caractère, afin d’offrir à une jeune famille un espace fluide et chaleureux, fidèle à l’esprit du lieu.",
-            `The Game Plan: Réorganiser les volumes pour mieux vivre l’espace.
-     Le projet a consisté à redistribuer les pièces, intégrer du rangement et ouvrir les perspectives, afin de laisser la lumière naturelle circuler librement et révéler le potentiel de chaque mètre carré.`,
-            `The Idea: Conjuguer charme de l’ancien et l’esprit contemporain.
-     Les moulures et le parquet ont été préservés, tandis que des niches, arcs et cloisons vitrées ont été créés pour apporter une touche graphique et actuelle.`,
-        ]
-    },
-    {
         name: "axians vinci",
         img: axians_vinci,
         slideImgs: [axians_vinci_2, axians_vinci_3, axians_vinci_4, axians_vinci_5, axians_vinci_6, axians_vinci_7],
@@ -56,6 +41,21 @@ export const dataSelectedProjects = [
         ]
     },
     {
+        name: "LIPPMANN",
+        img: lippmann,
+        slideImgs: [lippmann_2, lippmann_3, lippmann_4, lippmann_5, lippmann_6, lippmann_7, lippmann_8, lippmann_9, lippmann_10],
+        category: "Habitation",
+        location: "Paris 12e",
+        surface: "87 m²",
+        description: [
+            "Dans ce bel appartement traversant, MAI’N a imaginé un nouvel équilibre entre fonctionnalité, lumière et caractère, afin d’offrir à une jeune famille un espace fluide et chaleureux, fidèle à l’esprit du lieu.",
+            `Game plan : Réorganiser les volumes pour mieux vivre l’espace.
+     Le projet a consisté à redistribuer les pièces, intégrer du rangement et ouvrir les perspectives, afin de laisser la lumière naturelle circuler librement et révéler le potentiel de chaque mètre carré.`,
+            `The idea : Conjuguer charme de l’ancien et l’esprit contemporain.
+     Les moulures et le parquet ont été préservés, tandis que des niches, arcs et cloisons vitrées ont été créés pour apporter une touche graphique et actuelle.`,
+        ]
+    },
+    {
         name: "Paco Rabane",
         img: paco_rabane,
         slideImgs: [paco_rabane_2, paco_rabane_3, paco_rabane_4, paco_rabane_5],
@@ -65,8 +65,8 @@ export const dataSelectedProjects = [
         description: [
             "L'Élégance Futuriste : Un Écrin Minéral pour Paco Rabanne Rue du faubourg Saint-Honoré.",
             "La mission de MAI’N a été de concevoir un écrin pour la maison Paco Rabanne sur la prestigieuse rue Saint-Honoré, en réinterprétant ses codes futuristes à travers le prisme d'un classicisme parisien épuré.",
-            "Game plan: créér un dialogue entre le concept « Classique Parisien Minimaliste » l'héritage architectural parisien et la vision avant-gardiste de la marque. ",
+            "Game plan : créér un dialogue entre le concept « Classique Parisien Minimaliste » l'héritage architectural parisien et la vision avant-gardiste de la marque. ",
             "The idea : incarner l'ADN de la maison. Proposer une expérience où le style architectural répond à la modernité intemporelle de Paco Rabanne, créant un lieu unique qui honore à la fois son adresse parisienne et son statut de leader de la mode avancée.",
         ]
-    }
+    },
 ]

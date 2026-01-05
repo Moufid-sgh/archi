@@ -1,13 +1,10 @@
-import { useRef, useState, useEffect, Suspense } from 'react';
-import img1 from '/house.jpg'
-import img2 from '/bureau-2.jpg'
-import img3 from '/bureau-3.jpg'
+import { useRef, useState, useEffect, Suspense, lazy } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import { dataSelectedProjects } from '../dataSelectedProjects';
-import Overlay from './projets/Overlay';
+const Overlay = lazy(() => import("./projets/Overlay"));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +13,6 @@ const SelectedProjects = () => {
 
     const projectRef = useRef(null)
 
-    const imgs = [img1, img2, img3]
 
     useGSAP(() => {
         // Initial states

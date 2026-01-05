@@ -16,7 +16,8 @@ const Footer = () => {
             </a>
           </li>
           <li className='hover:opacity-50 duration-300 cursor-pointer'>
-            <a href="" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/people/Conseils-en-architecture-dint%C3%A9rieur-et-d%C3%A9coration-Paris/100063162373603/?mibextid=wwXIfr&rdid=WEljxlSsAJRVnICk&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CtGNbnqXm%2F%3Fmibextid%3DwwXIfr"
+              target="_blank" rel="noopener">
               Facebook
             </a>
           </li>

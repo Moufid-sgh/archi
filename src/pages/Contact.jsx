@@ -212,10 +212,10 @@ const Contact = () => {
                     ></textarea>
 
                     {status === 'sending' && (
-                        <p className="text-blue-500">Envoi en cours...</p>
+                        <p className="text-white">Envoi en cours...</p>
                     )}
                     {status === 'success' && (
-                        <p className="text-green-500 font-bold">Message envoyé avec succès !</p>
+                        <p className="text-violet-600 font-bold">Message envoyé avec succès !</p>
                     )}
                     {status === 'error' && (
                         <p className="text-red-500 font-bold">Erreur lors de l'envoi. Veuillez réessayer.</p>
