@@ -159,7 +159,7 @@ export const data = [
         description: [
             "MAI’N aménage les bureaux d’Axians, filiale du groupe VINCI Energies, à Issy-les-Moulineaux.",
             "Dans le cadre de son déménagement, Axians a souhaité repenser sa manière de travailler pour offrir à ses équipes un environnement plus fluide, collaboratif et inspirant.",
-            "MAI’N a accompagné cette transition à travers une conception sur mesure, alliant fonctionnalité, confort et identité de marque. Le nouvel aménagement privilégie la luminosité, la modularité et la convivialité, tout en traduisant la culture technologique et humaine de l’entreprise.",
+            // "MAI’N a accompagné cette transition à travers une conception sur mesure, alliant fonctionnalité, confort et identité de marque. Le nouvel aménagement privilégie la luminosité, la modularité et la convivialité, tout en traduisant la culture technologique et humaine de l’entreprise.",
             "Le résultat : un workspace contemporain et harmonieux, pensé dans le détail pour favoriser le bien-être et les échanges au quotidien."
         ]
     },
@@ -222,7 +222,7 @@ export const data = [
         name: "Chaumette Favor",
         img: chaumette,
         slideImgs: [chaumette_2, chaumette_3, chaumette_4, chaumette_5, chaumette_6, chaumette_7, chaumette_8, chaumette_9, chaumette_10],
-        category: "Bureaux",
+        category: "Retail",
         location: "Grigny",
         surface: "56m²",
         description: [

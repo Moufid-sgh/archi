@@ -145,8 +145,8 @@ const SelectedProjects = () => {
             <div className='text-center mt-16'>
                 <button className='border rounded-3xl cursor-pointer h-10 w-36 group overflow-hidden'>
                     <Link to='/projets' className='block group-hover:-translate-y-10 duration-500 ease-in-out mt-1.5'>
-                        <p>Voir plus</p>
-                        <p className="text-[#091423] bg-white rounded-3xl w-full mt-2.5  py-2">Voir plus</p>
+                        <p className='pt-0.5'>Voir plus</p>
+                        <p className="text-[#091423] bg-white rounded-3xl w-full mt-2 py-2">Voir plus</p>
                     </Link>
                 </button>
             </div>

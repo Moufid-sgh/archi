@@ -6,7 +6,7 @@ const Footer = () => {
         <p className='font-semibold'>Contactez-nous</p>
         <ul className="flex items-center space-x-4 text-sm">
           <li className='hover:opacity-50 duration-300 cursor-pointer'>
-            <a href="https://www.linkedin.com/in/manel-rachdi-30328977/" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/company/manel-archi-immo/" target="_blank" rel="noopener">
               Linkedin
             </a>
           </li>

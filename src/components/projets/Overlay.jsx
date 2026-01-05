@@ -107,44 +107,47 @@ const Overlay = ({ isOpen, onClose, project }) => {
         <div
             className={`fixed inset-0 z-50 overflow-y-auto min-h-screen transition-transform duration-700 ease-in-out bg-white text-[#091423] w-full
                   ${isOpen ? 'translate-y-0' : 'translate-y-full'}`}
+            style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}
         >
-            <div className='mb-24' ref={overlayRef}>
-                <button
-                    onClick={onClose}
-                    className="fixed right-6 top-4 z-[60] text-[#091423] hover:text-[#E63098] duration-300 text-2xl font-bold cursor-pointer"
-                >
-                    ✕
-                </button>
+            <div className="min-h-full w-full relative">
+                <div className='mb-24' ref={overlayRef}>
+                    <button
+                        onClick={onClose}
+                        className="fixed right-6 top-4 z-[60] text-[#091423] hover:text-[#E63098] duration-300 text-2xl font-bold cursor-pointer"
+                    >
+                        ✕
+                    </button>
 
-                <div className="lg:flex items-start justify-between px-2 lg:px-8 mt-16">
-                    {/* Colonne Image */}
-                    <div ref={mainImgContainerRef} className="lg:w-1/2 w-auto flex justify-center lg:justify-end lg:order-2 mb-6 lg:mb-0 overflow-hidden">
-                        <img
-                            src={project.img}
-                            alt={project.name}
-                            ref={mainImgRef}
-                            className="object-cover origin-bottom max-h-[550px]"
-                        />
-                    </div>
-
-                    {/* Colonne Infos */}
-                    <div className="lg:w-1/2 lg:order-1 lg:pr-8">
-                        <h2 className="BebasNeue split-title text-7xl lg:text-8xl font-bold mb-4">
-                            {project.name}
-                        </h2>
-
-                        <div className="flex items-center gap-10 mb-6 overflow-hidden">
-                            <p className="split-title font-bold text-xl">{project?.location}</p>
-                            <p className="split-title font-bold text-xl">{project?.surface}</p>
+                    <div className="lg:flex items-start justify-between px-2 lg:px-8 mt-16">
+                        {/* Colonne Image */}
+                        <div ref={mainImgContainerRef} className="lg:w-1/2 w-auto flex justify-center lg:justify-end lg:order-2 mb-6 lg:mb-0 overflow-hidden">
+                            <img
+                                src={project.img}
+                                alt={project.name}
+                                ref={mainImgRef}
+                                className="object-cover origin-bottom max-h-[550px]"
+                            />
                         </div>
 
-                        {/* Description*/}
-                        <div className="space-y-4 mx-auto">
-                            {project?.description.map((paragraph, index) => (
-                                <p key={index} className="desc-para text-justify leading-relaxed">
-                                    {formatText(paragraph)}
-                                </p>
-                            ))}
+                        {/* Colonne Infos */}
+                        <div className="lg:w-1/2 lg:order-1 lg:pr-8">
+                            <h2 className="BebasNeue split-title text-7xl lg:text-8xl font-bold mb-4">
+                                {project.name}
+                            </h2>
+
+                            <div className="flex items-center gap-10 mb-6 overflow-hidden">
+                                <p className="split-title font-bold text-xl">{project?.location}</p>
+                                <p className="split-title font-bold text-xl">{project?.surface}</p>
+                            </div>
+
+                            {/* Description*/}
+                            <div className="space-y-4 mx-auto">
+                                {project?.description.map((paragraph, index) => (
+                                    <p key={index} className="desc-para text-justify leading-relaxed">
+                                        {formatText(paragraph)}
+                                    </p>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

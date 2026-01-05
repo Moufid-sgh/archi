@@ -15,7 +15,7 @@ const Layout = () => {
 
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen max-w-[1500px] mx-auto overflow-hidden">
       {/* <Preloader /> */}
       <main className="relative Comfortaa page">
         <ScrollToTop />

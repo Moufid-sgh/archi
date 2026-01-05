@@ -36,10 +36,6 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <Contact />
       },
-      // {
-      //   path: 'recipe/:id',
-      //   element: <Recipe />
-      // },
     ],
     errorElement: <NotFound />
   }
