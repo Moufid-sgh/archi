@@ -34,7 +34,7 @@ const Contact = () => {
         setStatus('sending');
 
         // L'URL de votre script PHP sur le serveur
-        const endpoint = 'mail.php';
+        const endpoint = 'https://main-group.io/contact.php';
 
         try {
             const response = await fetch(endpoint, {

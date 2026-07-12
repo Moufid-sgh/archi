@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs -I{} echo {})",
+      "Bash(git -C \"/mnt/c/Users/moufi/Desktop/archi\" log --oneline -- mail.php contact.php)",
+      "Bash(git -C \"/mnt/c/Users/moufi/Desktop/archi\" status --short contact.php mail.php)",
+      "Bash(git -C \"/mnt/c/Users/moufi/Desktop/archi\" diff -- src/pages/Contact.jsx)",
+      "Bash(git -C \"/mnt/c/Users/moufi/Desktop/archi\" log --oneline --follow -- mail.php)",
+      "Bash(git -C \"/mnt/c/Users/moufi/Desktop/archi\" show HEAD~1:mail.php)",
+      "Bash(git -C \"/mnt/c/Users/moufi/Desktop/archi\" show e20c0f3^:mail.php)"
+    ]
+  }
+}

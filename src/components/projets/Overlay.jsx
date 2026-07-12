@@ -105,9 +105,10 @@ const Overlay = ({ isOpen, onClose, project }) => {
 
     return (
         <div
-            className={`fixed inset-0 z-50 overflow-y-auto min-h-screen transition-transform duration-700 ease-in-out bg-white text-[#091423] w-full
+            data-lenis-prevent
+            className={`fixed inset-0 z-50 transition-transform duration-700 ease-in-out bg-white text-[#091423] w-full
                   ${isOpen ? 'translate-y-0' : 'translate-y-full'}`}
-            style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}
+            style={{ overflowY: 'auto', height: '100%', overscrollBehavior: 'contain', WebkitOverflowScrolling: 'touch' }}
         >
             <div className="min-h-full w-full relative">
                 <div className='mb-24' ref={overlayRef}>

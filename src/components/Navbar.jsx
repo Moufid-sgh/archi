@@ -59,7 +59,7 @@ const Navbar = () => {
 
             <ul className="hidden lg:flex items-center space-x-8 tracking-wide">
                 {menu.map((item, index) => (
-                    <li key={index} className="group overflow-hidden h-6">
+                    <li key={index} className="group overflow-hidden outline-none h-6">
                         <Link
                             to={item.link}
                             className={`group-hover:-translate-y-7 block duration-500 ${isDarkPage ? 'text-black' : 'text-white'

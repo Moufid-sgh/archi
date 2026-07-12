@@ -6,8 +6,6 @@ import img1 from "/slider-1.webp";
 import img2 from "/slider-2.webp";
 import img3 from "/slider-3.webp";
 import img4 from "/slider-4.webp";
-import img5 from "/slider-5.webp";
-import ImageComponent from "./ImageComponent";
 
 
 const Hero = () => {
@@ -37,6 +35,7 @@ const Hero = () => {
   const slickPrimary = {
     // autoplay: true,
     // autoplaySpeed: 4000,
+    lazyLoad: "ondemand",
     slidesToShow: 2,
     slidesToScroll: 1,
     speed: 1800,
@@ -99,16 +98,16 @@ const Hero = () => {
         <div translate="no" className="absolute z-20 w-full top-[45%] md:top-[40%] left-10 md:left-20">
           <Slider {...slickSecondary} className="h-72 BebasNeue leading-12 md:leading-14 text-[44px] md:text-5xl lg:text-6xl" ref={slider2Ref}>
             <div className="md:pl-[10%] py-8">
-              <h1>SPACES WITH <br/> MEANING</h1>
+              <h1>SPACES WITH <br /> MEANING</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>One space <br/>One purpose</h1>
+              <h1>One space <br />One purpose</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>MORE THAN <br/> A SAPCE A VISION</h1>
+              <h1>MORE THAN <br /> A SPACE A VISION</h1>
             </div>
             <div className="md:pl-[10%]  py-8">
-              <h1>WE DESIGN <br/> YOUR “WHY”</h1>
+              <h1>WE DESIGN <br /> YOUR “WHY”</h1>
             </div>
           </Slider>
         </div>
@@ -139,14 +138,22 @@ const Hero = () => {
         </div>
 
         {/* Background Overlay */}
-        {/* <div className="hidden lg:block absolute z-10 left-[5%] w-[20%] h-[80vh] bg-black/80"></div> */}
         <div className="block absolute z-10 left-[5%] w-[90%] h-[80.5vh] bg-black/15 md:w-[20%] md:h-[80vh] md:bg-black/80"></div>
 
         {/* Image Slider */}
         <Slider {...slickPrimary} className="w-full h-screen" ref={slider1Ref}>
           {
             images.map((el, i) => {
-              return <img key={i} src={el} alt="pic" className='object-cover object-center h-[80vh]' />
+              return (
+                <img
+                  key={i}
+                  src={el}
+                  alt="pic"
+                  loading="lazy"
+                  decoding="async"
+                  className='object-cover object-center h-[80vh]'
+                />
+              )
             })
           }
         </Slider>
