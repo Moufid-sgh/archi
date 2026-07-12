@@ -59,7 +59,7 @@ export const dataSelectedProjects = [
         name: "Paco Rabane",
         img: paco_rabane,
         slideImgs: [paco_rabane_2, paco_rabane_3, paco_rabane_4, paco_rabane_5],
-        category: "Retail",
+        category: "Commerce & Hôtellerie",
         location: "Paris 8",
         surface: "75 m²",
         description: [

@@ -1,5 +1,5 @@
 const Tabs = ({ selected, onChange }) => {
-  const categories = ["Tous les projets", "Bureaux", "Retail", "Habitation"];
+  const categories = ["Tous les projets", "Bureaux", "Commerce & Hôtellerie", "Habitation"];
 
   return (
     <div className="flex justify-center gap-4 lg:gap-8">

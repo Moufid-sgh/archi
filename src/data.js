@@ -197,7 +197,7 @@ export const data = [
         name: "Jhon Richmond",
         img: jhon_richemond,
         slideImgs: [jhon_richemond_2, jhon_richemond_3, jhon_richemond_4, jhon_richemond_5],
-        category: "Retail",
+        category: "Commerce & Hôtellerie",
         location: "Paris 8",
         surface: "82 m²",
         description: [
@@ -211,7 +211,7 @@ export const data = [
         name: "Paco Rabane",
         img: paco_rabane,
         slideImgs: [paco_rabane_2, paco_rabane_3, paco_rabane_4, paco_rabane_5],
-        category: "Retail",
+        category: "Commerce & Hôtellerie",
         location: "Paris 8",
         surface: "75 m²",
         description: [
@@ -225,7 +225,7 @@ export const data = [
         name: "Chaumette Favor",
         img: chaumette,
         slideImgs: [chaumette_2, chaumette_3, chaumette_4, chaumette_5, chaumette_6, chaumette_7, chaumette_8, chaumette_9, chaumette_10],
-        category: "Retail",
+        category: "Commerce & Hôtellerie",
         location: "Grigny",
         surface: "56m²",
         description: [
@@ -281,12 +281,11 @@ export const data = [
         name: "Hotel Raphael Paris",
         img: hotel_raphael,
         slideImgs: [hotel_raphael, hotel_raphael_2],
-        category: "Habitation",
+        category: "Commerce & Hôtellerie",
         location: "17 Avenue Kleber, 75016 Paris",
         surface: "",
         description: [
-            "MAI’N réalise les rendus 3D photoréalistes des futurs sanitaires de l'Hôtel Raphaël, une adresse emblématique de l'hôtellerie parisienne.",
-            "Cet établissement cinq étoiles entreprend la rénovation de ses sanitaires afin d'offrir une expérience à la hauteur de son standing.",
+            "MAI’N réalise les rendus 3D photoréalistes des futurs sanitaires de l'Hôtel Raphaël, une adresse emblématique de l'hôtellerie parisienne. Cet établissement cinq étoiles entreprend la rénovation de ses sanitaires afin d'offrir une expérience à la hauteur de son standing.",
             "MAI’N a été missionnée pour traduire avec précision le concept décoratif imaginé en amont à travers des visualisations 3D ultra-réalistes. Chaque rendu permet de valider les matériaux, les décors muraux, les motifs en mosaïque ainsi que l'ensemble des équipements : baignoire, douche, robinetterie, paroi de douche en verre et sanitaires.",
             "Game plan : Représenter avec une fidélité absolue chaque détail du projet afin de sécuriser les choix avant la phase de réalisation.",
             "The idea : Faire du rendu 3D un véritable outil de décision, où chaque matériau, chaque texture et chaque équipement reflètent fidèlement le résultat final.",
