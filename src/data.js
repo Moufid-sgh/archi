@@ -108,6 +108,20 @@ import hotel_raphael_2 from "/hotel_raphael/2.webp";
 
 export const data = [
     {
+        name: "Hotel Raphael Paris",
+        img: hotel_raphael,
+        slideImgs: [hotel_raphael, hotel_raphael_2],
+        category: "Commerce & Hôtellerie",
+        location: "17 Avenue Kleber, 75016 Paris",
+        surface: "",
+        description: [
+            "MAI’N réalise les rendus 3D photoréalistes des futurs sanitaires de l'Hôtel Raphaël, une adresse emblématique de l'hôtellerie parisienne. Cet établissement cinq étoiles entreprend la rénovation de ses sanitaires afin d'offrir une expérience à la hauteur de son standing.",
+            "MAI’N a été missionnée pour traduire avec précision le concept décoratif imaginé en amont à travers des visualisations 3D ultra-réalistes. Chaque rendu permet de valider les matériaux, les décors muraux, les motifs en mosaïque ainsi que l'ensemble des équipements : baignoire, douche, robinetterie, paroi de douche en verre et sanitaires.",
+            "Game plan : Représenter avec une fidélité absolue chaque détail du projet afin de sécuriser les choix avant la phase de réalisation.",
+            "The idea : Faire du rendu 3D un véritable outil de décision, où chaque matériau, chaque texture et chaque équipement reflètent fidèlement le résultat final.",
+        ]
+    },
+    {
         name: "Franco suisse",
         img: franco_suisse,
         slideImgs: [franco_suisse_2, franco_suisse_3, franco_suisse_4, franco_suisse_5, franco_suisse_6, franco_suisse_7, franco_suisse_8],
@@ -275,20 +289,6 @@ export const data = [
             "Game plan : Moderniser en profondeur tout en redonnant de la fonctionnalité aux espaces.",
             "L’intervention a nécessité une restructuration complète : révision de l’électricité, des plafonds, des revêtements de sol, de la cuisine et de l’escalier afin de créer un cadre de vie cohérent, confortable et fluide.",
             "The idea :  Une rénovation complète pensée pour transformer la maison en un véritable refuge contemporain, à l’image de ceux qui l’habitent."
-        ]
-    },
-    {
-        name: "Hotel Raphael Paris",
-        img: hotel_raphael,
-        slideImgs: [hotel_raphael, hotel_raphael_2],
-        category: "Commerce & Hôtellerie",
-        location: "17 Avenue Kleber, 75016 Paris",
-        surface: "",
-        description: [
-            "MAI’N réalise les rendus 3D photoréalistes des futurs sanitaires de l'Hôtel Raphaël, une adresse emblématique de l'hôtellerie parisienne. Cet établissement cinq étoiles entreprend la rénovation de ses sanitaires afin d'offrir une expérience à la hauteur de son standing.",
-            "MAI’N a été missionnée pour traduire avec précision le concept décoratif imaginé en amont à travers des visualisations 3D ultra-réalistes. Chaque rendu permet de valider les matériaux, les décors muraux, les motifs en mosaïque ainsi que l'ensemble des équipements : baignoire, douche, robinetterie, paroi de douche en verre et sanitaires.",
-            "Game plan : Représenter avec une fidélité absolue chaque détail du projet afin de sécuriser les choix avant la phase de réalisation.",
-            "The idea : Faire du rendu 3D un véritable outil de décision, où chaque matériau, chaque texture et chaque équipement reflètent fidèlement le résultat final.",
         ]
     },
 ];
